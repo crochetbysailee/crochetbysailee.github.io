@@ -4,7 +4,6 @@ node_modules/
 # Old backend folders - replaced by docs/
 public/
 config/
-images/
 
 # OS noise
 .DS_Store
