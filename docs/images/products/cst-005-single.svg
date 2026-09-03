@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bgsinglev9on" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0F0F0"/>
+      <stop offset="100%" style="stop-color:#CCE4E4"/>
+    </linearGradient>
+    <radialGradient id="spsinglev9on" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" style="stop-color:white;stop-opacity:0.35"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bgsinglev9on)"/>
+  <rect width="800" height="800" fill="url(#spsinglev9on)"/>
+  <circle cx="400" cy="370" r="210" fill="#145F5F" opacity="0.1"/>
+  <circle cx="400" cy="370" r="130" fill="white"     opacity="0.35"/>
+  <text x="400" y="415" font-family="sans-serif" font-size="130" text-anchor="middle">☕</text>
+  <rect x="270" y="580" width="260" height="44" rx="22" fill="#145F5F" opacity="0.9"/>
+  <text x="400" y="608" font-family="sans-serif" font-size="18" font-weight="600"
+        fill="white" text-anchor="middle">Single</text>
+  <text x="400" y="680" font-family="Georgia,serif" font-size="26" font-weight="700"
+        fill="#145F5F" text-anchor="middle" opacity="0.85">Boho Coaster Set</text>
+</svg>
