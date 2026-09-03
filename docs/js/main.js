@@ -39,6 +39,15 @@ function applySiteConfig(site) {
   document.getElementById('contactIg').textContent     = site.contact.instagram;
   document.getElementById('contactWa').textContent     = site.contact.whatsapp;
 
+  // Hero image — set src if configured, else section stays CSS-only
+  const heroImg = document.getElementById('heroImage');
+  const heroWrap = document.getElementById('heroImageWrap');
+  if (site.hero?.image && heroImg && heroWrap) {
+    heroImg.src = site.hero.image;
+    heroImg.alt = site.name;
+    heroWrap.classList.add('has-image');
+  }
+
   if (site.theme) applyTheme(site.theme);
 }
 

@@ -4,15 +4,11 @@
     "tagline": "Handcrafted Crochet Artistry",
     "logo": "images/logo.jpg",
     "currency": "₹",
-    "contact": {
-      "email": "hello@crochetbysailee.in",
-      "instagram": "@crochetbysailee",
-      "whatsapp": "+91 98765 43210"
-    },
     "hero": {
       "headline": "Every stitch tells a story",
       "subheadline": "Handmade crochet pieces crafted with love, warmth, and care — made to order, just for you",
-      "cta": "Explore Collection"
+      "cta": "Explore Collection",
+      "image": ""
     },
     "footer": {
       "tagline": "Made with 100% love, one stitch at a time."

@@ -325,6 +325,33 @@ ul { list-style: none; }
   margin-bottom: 1.5rem;
   opacity: .85;
 }
+/* Hero image — right side, hidden when no src set */
+.hero__image-wrap {
+position: absolute;
+right: 0; top: 0; bottom: 0;
+width: 48%;
+overflow: hidden;
+opacity: 0;
+transition: opacity .6s ease;
+pointer-events: none;
+}
+.hero__image-wrap.has-image {
+opacity: 1;
+pointer-events: auto;
+}
+.hero__image {
+width: 100%; height: 100%;
+object-fit: cover;
+object-position: center top;
+}
+/* When a hero image exists, constrain text to left half */
+.hero:has(.hero__image-wrap.has-image) .hero__content {
+max-width: 52%;
+}
+@media (max-width: 768px) {
+.hero__image-wrap { display: none; }
+.hero:has(.hero__image-wrap.has-image) .hero__content { max-width: 100%; }
+}
 .hero__scroll-hint {
   position: absolute;
   bottom: 2rem;

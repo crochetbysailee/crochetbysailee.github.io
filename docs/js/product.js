@@ -12,14 +12,16 @@ const currency = '₹';
   if (!id) { location.href = 'index.html'; return; }
 
   try {
-    const res  = await fetch(DATA_URL);
-    const data = await res.json();
+    const [data, contact] = await Promise.all([
+      fetch(DATA_URL).then(r => r.json()),
+      fetch('data/contact.json').then(r => r.json()),
+    ]);
     const product = data.products.find(p => p.id === id);
     if (!product) throw new Error('Not found');
 
     document.title = `${product.name} — ${data.site.name}`;
     if (data.site.theme) applyTheme(data.site.theme);
-    renderProduct(product, data.site.contact);
+    renderProduct(product, contact);
     loadRelated(product, data.products);
   } catch {
     document.getElementById('pdp').innerHTML =
