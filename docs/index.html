@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>crochetbysailee — Handcrafted Crochet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!--  NAV  -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a class="nav__logo" href="index.html">
+        <img src="images/logo.jpg" alt="crochetbysailee" />
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" class="nav__link active">Home</a></li>
+        <li><a href="#catalog" class="nav__link">Shop</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!--  HERO  -->
+  <header class="hero" id="hero">
+    <div class="hero__bg-pattern" aria-hidden="true"></div>
+    <div class="hero__floating-yarns" aria-hidden="true">
+      <div class="yarn yarn--1"></div>
+      <div class="yarn yarn--2"></div>
+      <div class="yarn yarn--3"></div>
+      <div class="yarn yarn--4"></div>
+    </div>
+    <div class="hero__content container">
+      <p class="hero__eyebrow reveal">Handmade with heart</p>
+      <span class="hero__brand-name reveal">crochetbysailee</span>
+      <h1 class="hero__headline reveal" id="heroHeadline">Every stitch tells a story</h1>
+      <p class="hero__sub reveal" id="heroSub">Handmade crochet pieces crafted with love, warmth, and care — made to order, just for you</p>
+      <a href="#catalog" class="btn btn--primary reveal" id="heroCta">Explore Collection</a>
+    </div>
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <span class="scroll-dot"></span>
+    </div>
+  </header>
+
+  <!--  MARQUEE STRIP  -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>✦ Handmade</span><span>✦ Made to Order</span><span>✦ Premium Yarn</span>
+      <span>✦ Gift Ready</span><span>✦ Customisable</span><span>✦ Ships India-wide</span>
+      <span>✦ Handmade</span><span>✦ Made to Order</span><span>✦ Premium Yarn</span>
+      <span>✦ Gift Ready</span><span>✦ Customisable</span><span>✦ Ships India-wide</span>
+    </div>
+  </div>
+
+  <!--  FEATURED  -->
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Hand-picked for you</p>
+        <h2 class="section__title">Featured Pieces</h2>
+      </div>
+      <div class="featured-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!--  CATALOG  -->
+  <section class="section section--tinted" id="catalog">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Full collection</p>
+        <h2 class="section__title">Shop All Products</h2>
+      </div>
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-category="all">All</button>
+      </div>
+      <div class="catalog-toolbar">
+        <span class="catalog-count" id="catalogCount">Loading…</span>
+        <select class="sort-select" id="sortSelect">
+          <option value="">Sort by</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="newest">Newest</option>
+        </select>
+      </div>
+      <div class="product-grid" id="productGrid">
+        <div class="product-card skeleton"></div>
+        <div class="product-card skeleton"></div>
+        <div class="product-card skeleton"></div>
+        <div class="product-card skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!--  ABOUT  -->
+  <section class="section about" id="about">
+    <div class="container about__inner">
+      <div class="about__visual" aria-hidden="true">
+        <div class="about__yarn-art">
+          <div class="about__ball about__ball--1"></div>
+          <div class="about__ball about__ball--2"></div>
+          <div class="about__ball about__ball--3"></div>
+        </div>
+      </div>
+      <div class="about__text">
+        <p class="section__eyebrow">Our story</p>
+        <h2 class="section__title">Made with intention,<br/>stitched with love</h2>
+        <p>Every piece in our collection starts with a single strand of yarn and a hook. We source only the finest cotton, wool, and bamboo blends — soft enough for babies, durable enough for everyday use.</p>
+        <p>Each item is made to order, which means it's crafted fresh just for you. No mass production, no shortcuts — only genuine handmade work delivered with care.</p>
+        <div class="about__stats">
+          <div class="about__stat"><span class="about__stat-num">500+</span><span>Happy customers</span></div>
+          <div class="about__stat"><span class="about__stat-num">50+</span><span>Unique designs</span></div>
+          <div class="about__stat"><span class="about__stat-num">5★</span><span>Avg. rating</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  CONTACT  -->
+  <section class="section section--tinted contact" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Get in touch</p>
+        <h2 class="section__title">We'd love to hear from you</h2>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__card">
+          <span class="contact__icon">📧</span>
+          <h3>Email</h3>
+          <p id="contactEmail">hello@crochetbysailee.in</p>
+        </div>
+        <div class="contact__card">
+          <span class="contact__icon">📷</span>
+          <h3>Instagram</h3>
+          <p id="contactIg">@crochetbysailee</p>
+        </div>
+        <div class="contact__card">
+          <span class="contact__icon">💬</span>
+          <h3>WhatsApp</h3>
+          <p id="contactWa">+91 98765 43210</p>
+        </div>
+      </div>
+      <p class="contact__note">Custom orders welcome — just send us a message!</p>
+    </div>
+  </section>
+
+  <!--  FOOTER  -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="images/logo.jpg" alt="crochetbysailee" />
+      </div>
+      <p class="footer__tagline" id="footerTagline">Made with 100% love, one stitch at a time.</p>
+      <p class="footer__copy">© <span id="year"></span> crochetbysailee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

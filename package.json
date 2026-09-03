@@ -1,0 +1,17 @@
+{
+  "name": "crochetbysailee",
+  "version": "1.0.0",
+  "description": "Modular crochet product website",
+  "main": "server.js",
+  "scripts": {
+    "start":  "node server.js",
+    "dev":    "npx nodemon server.js",
+    "build":  "node build.js",
+    "images": "node build.js --images-only",
+    "fonts":  "node build.js --fonts-only"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors":    "^2.8.5"
+  }
+}

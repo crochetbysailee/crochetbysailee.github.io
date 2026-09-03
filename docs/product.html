@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product — crochetbysailee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="product-page">
+
+  <!--  NAV  -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a class="nav__logo" href="index.html">
+        <img src="images/logo.jpg" alt="crochetbysailee" />
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="index.html#catalog" class="nav__link">Shop</a></li>
+        <li><a href="index.html#about" class="nav__link">About</a></li>
+        <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!--  BREADCRUMB  -->
+  <div class="breadcrumb container">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb__sep">›</span>
+    <a href="index.html#catalog">Shop</a>
+    <span class="breadcrumb__sep">›</span>
+    <span id="breadcrumbProduct">Loading…</span>
+  </div>
+
+  <!--  PRODUCT DETAIL  -->
+  <main class="pdp container" id="pdp">
+    <div class="pdp__gallery" id="pdpGallery">
+      <div class="gallery__main-wrap">
+        <img class="gallery__main" id="galleryMain" src="" alt="" />
+        <button class="gallery__zoom-btn" id="galleryZoomBtn" aria-label="Zoom image">⤢</button>
+      </div>
+      <div class="gallery__thumbs" id="galleryThumbs"></div>
+    </div>
+
+    <div class="pdp__info" id="pdpInfo">
+      <div class="pdp__badge-row">
+        <span class="pdp__category" id="pdpCategory">—</span>
+        <span class="pdp__badge" id="pdpBadge" hidden></span>
+      </div>
+      <h1 class="pdp__name" id="pdpName">Loading…</h1>
+      <div class="pdp__price-row">
+        <span class="pdp__price" id="pdpPrice">—</span>
+        <span class="pdp__original" id="pdpOriginal" hidden></span>
+        <span class="pdp__discount" id="pdpDiscount" hidden></span>
+      </div>
+      <p class="pdp__desc" id="pdpDesc">—</p>
+      <div class="pdp__option" id="colorSection">
+        <span class="pdp__option-label">Colour: <strong id="selectedColor"></strong></span>
+        <div class="color-swatches" id="colorSwatches"></div>
+      </div>
+      <div class="pdp__cta">
+        <button class="btn btn--primary btn--lg" id="orderBtn">Order via WhatsApp</button>
+        <button class="btn btn--outline" id="wishlistBtn">♡ Save</button>
+      </div>
+      <p class="pdp__delivery">🚚 Made to order — ships in <span id="pdpLeadTime">3–5</span> business days</p>
+      <div class="accordion" id="detailsAccordion">
+        <button class="accordion__head" id="detailsToggle">
+          Product Details <span class="accordion__chevron">›</span>
+        </button>
+        <div class="accordion__body" id="detailsBody">
+          <table class="details-table" id="detailsTable"></table>
+        </div>
+      </div>
+      <div class="accordion">
+        <button class="accordion__head" id="careToggle">
+          Care & Washing <span class="accordion__chevron">›</span>
+        </button>
+        <div class="accordion__body" id="careBody">
+          <p>All our pieces are handmade and require gentle care. Follow the specific washing instructions in the product details. When in doubt, hand wash in cold water with a mild detergent and lay flat to dry away from direct sunlight.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--  ZOOM MODAL  -->
+  <div class="zoom-modal" id="zoomModal" hidden>
+    <button class="zoom-modal__close" id="zoomClose">✕</button>
+    <img class="zoom-modal__img" id="zoomImg" src="" alt="" />
+  </div>
+
+  <!--  RELATED  -->
+  <section class="section" id="relatedSection">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">You might also like</p>
+        <h2 class="section__title">More from the collection</h2>
+      </div>
+      <div class="product-grid" id="relatedGrid"></div>
+    </div>
+  </section>
+
+  <!--  FOOTER  -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="images/logo.jpg" alt="crochetbysailee" />
+      </div>
+      <p class="footer__tagline">Made with 100% love, one stitch at a time.</p>
+      <p class="footer__copy">© <span id="year"></span> crochetbysailee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/product.js"></script>
+</body>
+</html>
