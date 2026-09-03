@@ -13,8 +13,8 @@ const currency = '₹';
 
   try {
     const [data, contact] = await Promise.all([
-      fetch(DATA_URL).then(r => r.json()),
-      fetch('data/contact.json').then(r => r.json()),
+      fetch(DATA_URL, { cache: 'no-cache' }).then(r => r.json()),
+      fetch('data/contact.json', { cache: 'no-cache' }).then(r => r.json())
     ]);
     const product = data.products.find(p => p.id === id);
     if (!product) throw new Error('Not found');

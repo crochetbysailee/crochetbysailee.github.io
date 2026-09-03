@@ -13,11 +13,13 @@ let siteConfig  = {};
   document.getElementById('year').textContent = new Date().getFullYear();
 
   try {
-    const res  = await fetch(DATA_URL);
-    const data = await res.json();
+    const [data, contact] = await Promise.all([
+      fetch(DATA_URL,            { cache: 'no-cache' }).then(r => r.json()),
+      fetch('data/contact.json', { cache: 'no-cache' }).then(r => r.json()),
+    ]);
     siteConfig = data.site;
 
-    applySiteConfig(siteConfig);
+    applySiteConfig(siteConfig, contact);
     buildFilters(data.products);
     buildFeatured(data.products.filter(p => p.featured));
     buildGrid(data.products);
@@ -29,18 +31,20 @@ let siteConfig  = {};
 })();
 
 //  Site config 
-function applySiteConfig(site) {
+function applySiteConfig(site, contact = {}) {
   document.title = `${site.name} — ${site.tagline}`;
   document.getElementById('heroHeadline').textContent  = site.hero.headline;
   document.getElementById('heroSub').textContent       = site.hero.subheadline;
   document.getElementById('heroCta').textContent       = site.hero.cta;
   document.getElementById('footerTagline').textContent = site.footer.tagline;
-  document.getElementById('contactEmail').textContent  = site.contact.email;
-  document.getElementById('contactIg').textContent     = site.contact.instagram;
-  document.getElementById('contactWa').textContent     = site.contact.whatsapp;
 
-  // Hero image — set src if configured, else section stays CSS-only
-  const heroImg = document.getElementById('heroImage');
+  // Contact from separate contact.json
+  document.getElementById('contactEmail').textContent = contact.email     || '';
+  document.getElementById('contactIg').textContent    = contact.instagram  || '';
+  document.getElementById('contactWa').textContent    = contact.whatsapp   || '';
+
+  // Hero image set src if configured, else section stays CSS-only
+  const heroImg  = document.getElementById('heroImage');
   const heroWrap = document.getElementById('heroImageWrap');
   if (site.hero?.image && heroImg && heroWrap) {
     heroImg.src = site.hero.image;
@@ -51,12 +55,12 @@ function applySiteConfig(site) {
   if (site.theme) applyTheme(site.theme);
 }
 
-//  Theme — applies site.theme from config as CSS custom properties 
+//  Theme  applies site.theme from config as CSS custom properties 
 function applyTheme(theme) {
   const root = document.documentElement;
   const { colors, fonts, nav, marquee, about } = theme;
 
-  // Colors → CSS variables
+  // Colors  CSS variables
   if (colors) {
     const map = {
       primary:     '--clr-primary',
@@ -118,7 +122,7 @@ function applyTheme(theme) {
   }
 }
 
-// ── Nav 
+//  Nav 
 function setupNav() {
   const nav   = document.getElementById('nav');
   const ham   = document.getElementById('hamburger');
@@ -129,7 +133,7 @@ function setupNav() {
   ham?.addEventListener('click', () => links?.classList.toggle('open'));
 }
 
-// ── Scroll reveal 
+//  Scroll reveal 
 function setupReveal() {
   const io = new IntersectionObserver(
     entries => entries.forEach(e => {
@@ -205,7 +209,7 @@ function cardHTML(p, idx = 0) {
   </article>`;
 }
 
-// ── Filters 
+//  Filters 
 function buildFilters(products) {
   const wrap = document.getElementById('filters');
   const cats = [...new Set(products.map(p => p.category))];
@@ -225,7 +229,7 @@ function buildFilters(products) {
   });
 }
 
-// ── Sort 
+//  Sort 
 function setupSort() {
   document.getElementById('sortSelect').addEventListener('change', e => {
     const val    = e.target.value;
@@ -238,11 +242,11 @@ function setupSort() {
   });
 }
 
-// ── Navigation 
+//  Navigation 
 function openProduct(id) {
   window.location.href = `product.html?id=${id}`;
 }
 
-// ── Utils 
+//  Utils 
 function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 function slug(s) { return s.toLowerCase().replace(/\s+/g, '-'); }
