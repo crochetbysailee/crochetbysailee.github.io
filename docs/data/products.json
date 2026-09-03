@@ -74,7 +74,7 @@
       "thumbnail": "images/thumbnails/book-sleeve-001-thumb.jpg",
       "images": [
         "images/products/book-sleeve-001-main.jpg",
-        "images/products/book-sleeve-001-side.jpg",
+        "images/products/book-sleeve-001-side.jpg"
       ],
       "tags": ["gift", "bookworm", "booklover", "nerd"],
       "featured": true,
