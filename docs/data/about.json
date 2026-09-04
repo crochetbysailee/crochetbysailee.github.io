@@ -2,33 +2,33 @@
   "eyebrow": "Our story",
   "headline": "Made with intention,<br/>stitched with love",
   "paragraphs": [
-    "Every piece in our collection starts with a single strand of yarn and a hook. We source only the finest cotton, wool, and bamboo blends - soft enough for babies, durable enough for everyday use.",
-    "Each item is made to order, which means it's crafted fresh just for you. No mass production, no shortcuts - only genuine handmade work delivered with care."
+    "Every piece in our collection starts with a single strand of yarn and a hook. We source only the finest cotton, wool, and acrylic yarn, soft enough for babies, durable enough for everyday use.",
+    "Each item is made to order, which means it's crafted fresh just for you. No mass production, no shortcuts, only genuine handmade work delivered with care."
   ],
   "stats": [
-    { "value": "500+", "label": "Happy customers" },
+    { "value": "200+", "label": "Happy customers" },
     { "value": "50+",  "label": "Unique designs"  },
     { "value": "5*",   "label": "Avg. rating"     }
   ],
   "founders": [
     {
-      "name":      "Sailee",
-      "role":      "Founder & Lead Designer",
+      "name":      "Sailee Bhagwat",
+      "role":      "Founder & Creative Lead",
       "image":     "",
-      "instagram": "@crochetbysailee",
+      "instagram": "@saileebhagwat",
       "bio": [
-        "The hands behind every stitch - Sailee started crocheting as a stress-buster and turned it into a full creative practice.",
+        "The hands behind every stitch, Sailee started crocheting as a stress-buster and turned it into a full creative practice.",
         "She specialises in amigurumi, baby wear, and custom gifting with a love for clean, earthy aesthetics."
       ]
     },
     {
-      "name":      "Co-Founder Name",
-      "role":      "Co-Founder",
+      "name":      "Prerna Patil",
+      "role":      "Co-Founder & Brand Lead",
       "image":     "",
-      "instagram": "@handle",
+      "instagram": "@prernapatiil",
       "bio": [
-        "First line about this founder - their role, passion, or background.",
-        "Second line - something personal or what they bring to the brand."
+        "Prerna is the creative mind behind the brand's social media, customer experience and online presence.",
+        "She loves turning Sailee's handmade creations into a brand that people can discover, connect with, and love."
       ]
     }
   ]

@@ -5,7 +5,7 @@
   "currency": "₹",
   "hero": {
     "headline":    "Every stitch tells a story",
-    "subheadline": "Handmade crochet pieces crafted with love, warmth, and care - made to order, just for you",
+    "subheadline": "Handmade crochet pieces crafted with love, warmth, and care, made to order, just for you",
     "cta":         "Explore Collection",
     "image":       ""
   },
@@ -30,13 +30,13 @@
     "fonts": {
       "serif":  "Playfair Display",
       "sans":   "Inter",
-      "script": "Dancing Script"
+      "script": "Alex Brush"
     },
     "nav": {
       "height": "80px"
     },
     "marquee": {
-      "text": "* Handmade | * Made to Order | * Premium Yarn | * Gift Ready | * Customisable | * Ships India-wide"
+      "text": "* Handmade | * Made to Order | * Premium Yarn | * Gift Ready | * Custom Orders | * Ships India-wide"
     }
   }
 }
