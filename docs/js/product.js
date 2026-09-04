@@ -11,10 +11,14 @@ let currency = '₹';
   if (!id) { location.href = 'index.html'; return; }
 
   try {
+    const safe = url => fetch(url, { cache: 'no-cache' })
+      .then(r => { if (!r.ok) throw new Error(url); return r.json(); })
+      .catch(() => ({}));
+
     const [prods, site, contact] = await Promise.all([
-      fetch('data/products.json', { cache: 'no-cache' }).then(r => r.json()),
-      fetch('data/site.json',     { cache: 'no-cache' }).then(r => r.json()),
-      fetch('data/contact.json',  { cache: 'no-cache' }).then(r => r.json()),
+      safe('data/products.json'),
+      safe('data/site.json'),
+      safe('data/contact.json'),
     ]);
     const product = prods.products.find(p => p.id === id);
     if (!product) throw new Error('Not found');

@@ -25,6 +25,7 @@ const DOCS      = path.join(ROOT, 'docs');
 const FONTS_DIR = path.join(DOCS, 'fonts');
 const FONTS_CSS = path.join(DOCS, 'css', 'fonts.css');
 const DATA_FILE = path.join(DOCS, 'data', 'products.json');
+const SITE_FILE = path.join(DOCS, 'data', 'site.json');
 
 const CHROME_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 
@@ -299,15 +300,18 @@ async function buildFonts(theme) {
   if (FONTS_ONLY)  console.log('  Mode: fonts only');
   console.log('--------------------------------------------');
 
-  // Read config
+  // Read products
   if (!fs.existsSync(DATA_FILE)) {
-    err(`Config not found: ${DATA_FILE}`);
-    err('Make sure docs/data/products.json exists before running the build.');
+    err(`Not found: ${DATA_FILE}`);
     process.exit(1);
   }
-  const config   = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
-  const products = config.products;
-  const theme    = config.site?.theme;
+  const products = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8')).products;
+
+  // Read site config (theme lives in site.json now)
+  const siteRaw = fs.existsSync(SITE_FILE)
+    ? JSON.parse(fs.readFileSync(SITE_FILE, 'utf8'))
+    : {};
+  const theme = siteRaw.theme;
 
   if (FULL || IMAGES_ONLY) buildImages(products);
   if (FULL || FONTS_ONLY)  await buildFonts(theme);

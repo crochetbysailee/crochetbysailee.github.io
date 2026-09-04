@@ -15,12 +15,16 @@ let currency    = '₹';
   setupReveal();
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  const safeJSON = url => fetch(url, { cache: 'no-cache' })
+    .then(r => { if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); })
+    .catch(e => { console.warn('Could not load', e.message); return {}; });
+
   try {
     const [prods, site, about, contact] = await Promise.all([
-      fetch(URL_PRODUCTS, { cache: 'no-cache' }).then(r => r.json()),
-      fetch(URL_SITE,     { cache: 'no-cache' }).then(r => r.json()),
-      fetch(URL_ABOUT,    { cache: 'no-cache' }).then(r => r.json()),
-      fetch(URL_CONTACT,  { cache: 'no-cache' }).then(r => r.json()),
+      safeJSON(URL_PRODUCTS),
+      safeJSON(URL_SITE),
+      safeJSON(URL_ABOUT),
+      safeJSON(URL_CONTACT),
     ]);
 
     siteConfig = site;
