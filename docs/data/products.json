@@ -8,7 +8,7 @@
       "originalPrice": 999,
       "badge": "New",
       "shortDescription": "Huggable hand-crocheted teddy bear in soft cotton yarn",
-      "description": "A cute, handmade crochet book sleeve featuring a dreamy blue-and-white daisy design. Carefully crocheted with soft yarn, it’s perfect for keeping your books protected from scratches, dust and minor bumps while adding a little personality to your reading routine",
+      "description": "A cute, handmade crochet book sleeve featuring a dreamy blue-and-white/yellow-and-white daisy design. Carefully crocheted with soft yarn, it’s perfect for keeping your books protected from scratches, dust and minor bumps while adding a little personality to your reading routine.",
       "details": {
         "Material": "Premium acrylic yarn",
         "Height": "1 inch",
@@ -36,6 +36,303 @@
       "featured": true,
       "inStock": true,
       "createdAt": "2026-09-03"
+    },
+    {
+      "id": "cherry-blossom-pot-001",
+      "name": "Cherry Blossom Flower Pot",
+      "category": "bouquets & flowers",
+      "price": 999,
+      "originalPrice": 1199,
+      "badge": "New",
+      "shortDescription": "A handmade crochet flower pot with delicate pink blossoms",
+      "description": "Bring a little spring indoors with this charming handmade crochet flower pot. Featuring delicate pink flowers, green leaves and a cozy neutral crochet pot, this piece is designed to add a soft, whimsical touch to your home or workspace.Unlike fresh flowers, this little arrangement never wilts, making it a beautiful keepsake or thoughtful gift for someone special.",
+      "details": {
+        "Material": "Premium acrylic yarn",
+        "Washable": "Not washable",
+        "Made to order": "5-7 business days"
+      },
+      "colors": [
+        "Pink-Beige"
+      ],
+      "thumbnail": "images/thumbnails/cherry-blossom-pot-001-thumb.jpg",
+      "images": [
+        "images/products/cherry-blossom-pot-001-main.jpg",
+        "images/products/cherry-blossom-pot-001-side.jpg"
+      ],
+      "tags": [
+        "gift",
+        "homedecore",
+        "desk-decore",
+        "flower-pot"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "2026-09-04"
+    },
+    {
+      "id": "rose-and-bottle-bouquet-001",
+      "name": "Rose and Bottle Bouquet",
+      "category": "bouquets & flowers",
+      "price": 1199,
+      "originalPrice": 1399,
+      "badge": null,
+      "shortDescription": "A statement handmade bouquet featuring a crochet rose and a detailed crochet bottle replica, made to be gifted and kept forever.",
+      "description": "A unique twist on the classic bouquet! This handmade arrangement features a vibrant crochet rose, detailed green leaves and a hand-crocheted bottle replica, beautifully arranged in an aesthetic newspaper-style wrap and finished with a golden ribbon. Unlike a traditional bouquet, every element is handmade and designed to be kept as a long-lasting keepsake. Perfect for birthdays, anniversaries, celebrations or simply surprising someone special.",
+      "details": {
+        "Material": "Premium acrylic yarn",
+        "Washable": "Not washable",
+        "Made to order": "6-7 business days"
+      },
+      "colors": [
+        "Red-Brown-Green"
+      ],
+      "thumbnail": "images/thumbnails/rose-and-bottle-bouquet-001-thumb.jpg",
+      "images": [
+        "images/products/rose-and-bottle-bouquet-001-main.jpg",
+        "images/products/rose-and-bottle-bouquet-001-side.jpg"
+      ],
+      "tags": [
+        "gift",
+        "bouquet",
+        "beer-bottle-bouquet",
+        "custom-bouquet"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "2026-09-04"
+    },
+    {
+      "id": "sun-glow-claw-clip-001",
+      "name": "Sun Glow Claw Clip",
+      "category": "hair accessories",
+      "price": 499,
+      "originalPrice": 599,
+      "badge": null,
+      "shortDescription": "A statement crochet sunflower hair claw made to turn a simple hairstyle into a whole vibe",
+      "description": "Add a little sunshine to your everyday hairstyle with this handmade crochet sunflower hair claw. Featuring layered sunflower blooms, green leaves and delicate pearl accents, this piece combines a playful floral look with an elegant touch.Perfect for ponytails, buns or half-up hairstyles, it’s a beautiful accessory for everyday outfits, festive looks, picnics, vacations and special occasions.",
+      "details": {
+        "Material": "Premium cotton yarn",
+        "Washable": "Not washable",
+        "Made to order": "5-7 business days"
+      },
+      "colors": [
+        "Yellow"
+      ],
+      "thumbnail": "images/thumbnails/sun-glow-claw-clip-001-thumb.jpg",
+      "images": [
+        "images/products/sun-glow-claw-clip-001-main.jpg",
+        "images/products/sun-glow-claw-clip-001-side.jpg"
+      ],
+      "tags": [
+        "hair-clutcher",
+        "hair-clip",
+        "hair-accessory",
+        "gift"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "2026-09-04"
+    },
+    {
+      "id": "tulip-hair-clutcher-001",
+      "name": "Tulip Hair Clutcher",
+      "category": "hair accessories",
+      "price": 499,
+      "originalPrice": 599,
+      "badge": null,
+      "shortDescription": "A pretty handmade crochet tulip hair clutcher with delicate lavender blooms, green leaves and pearl accents.",
+      "description": "Add a soft floral touch to your everyday hairstyles with our handmade Crochet Tulip Hair Clutcher. Featuring beautifully crocheted lavender tulips, leafy green details and subtle pearl accents, this statement hair accessory is perfect for adding a little charm to your look. Designed with a sturdy claw clip underneath, it’s both pretty and practical. Perfect for buns, ponytails and half-up hairstyles.",
+      "details": {
+        "Material": "Premium cotton yarn",
+        "Washable": "Not washable",
+        "Made to order": "5-7 business days"
+      },
+      "colors": [
+        "Lavender"
+      ],
+      "thumbnail": "images/thumbnails/tulip-hair-clutcher-001-thumb.jpg",
+      "images": [
+        "images/products/tulip-hair-clutcher-001-main.jpg",
+        "images/products/tulip-hair-clutcher-001-side.jpg"
+      ],
+      "tags": [
+        "hair-accessory",
+        "gift",
+        "hair-clutcher",
+        "hair-clip"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "2026-09-04"
+    },
+    {
+      "id": "sakura-claw-clip-001",
+      "name": "Sakura Claw Clip",
+      "category": "hair accessories",
+      "price": 499,
+      "originalPrice": 599,
+      "badge": null,
+      "shortDescription": "A delicate handmade crochet sakura hair clutcher featuring soft pink blossoms, green leaves and dainty pearl accents.",
+      "description": "Add a touch of spring to your hairstyle with our Crochet Sakura Hair Clutcher. Inspired by delicate cherry blossoms, this statement accessory features hand-crocheted pink sakura flowers, tiny buds, fresh green leaves and subtle pearl embellishments. The floral arrangement is attached to a sturdy claw clip, making it perfect for ponytails, buns and half-up hairstyles. A beautiful choice for everyday styling, festive outfits, special occasions or gifting.",
+      "details": {
+        "Material": "Premium cotton yarn",
+        "Washable": "Not washable",
+        "Made to order": "5-7 business days"
+      },
+      "colors": [
+        "Baby pink"
+      ],
+      "thumbnail": "images/thumbnails/sakura-claw-clip-001-thumb.jpg",
+      "images": [
+        "images/products/sakura-claw-clip-001-main.jpg",
+        "images/products/sakura-claw-clip-001-side.jpg"
+      ],
+      "tags": [
+        "hair-accessory",
+        "gift",
+        "hair-clutcher",
+        "hair-clip"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "2026-09-04"
+    },
+    {
+      "id": "butterfly-claw-clip-001",
+      "name": "Butterfly Claw Clip",
+      "category": "hair accessories",
+      "price": 499,
+      "originalPrice": 799,
+      "badge": "Trending",
+      "shortDescription": "A statement-making crochet butterfly hair claw that adds the cutest handmade touch to any outfit.",
+      "description": "Make your everyday hairstyles a little more fun with this handmade crochet butterfly hair claw. Featuring a bold black, blue/ yellow/ pink and white butterfly design, this unique hair accessory is perfect for adding a playful, aesthetic touch to your look. The crochet butterfly is carefully handmade and attached to a sturdy claw clip, making it both cute and practical for everyday styling.",
+      "details": {
+        "Material": "Premium acrylic yarn",
+        "Washable": "Not washable",
+        "Made to order": "5-7 business days"
+      },
+      "colors": [
+        "Blue-Black",
+        "Yellow-Black",
+        "Pink-Black"
+      ],
+      "thumbnail": "images/thumbnails/butterfly-claw-clip-001-thumb.jpg",
+      "images": [
+        "images/products/butterfly-claw-clip-001-main.jpg",
+        "images/products/butterfly-claw-clip-001-side.jpg",
+        "images/products/butterfly-claw-clip-001-side1.jpg"
+      ],
+      "tags": [
+        "hair-accessory",
+        "gift",
+        "hair-clutcher",
+        "hair-clip"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "2026-09-04"
+    },
+    {
+      "id": "daisy-bucket-hat-001",
+      "name": "Daisy Bucket Hat",
+      "category": "accessories",
+      "price": 899,
+      "originalPrice": 1199,
+      "badge": null,
+      "shortDescription": "A handmade crochet bucket hat covered in cute daisies. Your new favourite sunny-day accessory",
+      "description": "Add a little colour and cottagecore charm to your outfits with our handmade crochet daisy bucket hat. Featuring a playful daisy design and a relaxed bucket-hat silhouette, it’s perfect for sunny days, vacations, picnics, festivals, and everyday looks. Each hat is carefully crocheted by hand, making every piece unique and full of character.",
+      "details": {
+        "Material": "Premium acrylic yarn",
+        "Washable": "Hand wash lay flat to dry",
+        "Made to order": "5-7 business days"
+      },
+      "colors": [
+        "Red-White",
+        "Yellow-White"
+      ],
+      "thumbnail": "images/thumbnails/daisy-bucket-hat-001-thumb.jpg",
+      "images": [
+        "images/products/daisy-bucket-hat-001-main.jpg",
+        "images/products/daisy-bucket-hat-001-side.jpg",
+        "images/products/daisy-bucket-hat-001-side1.jpg"
+      ],
+      "tags": [
+        "bucket-hat",
+        "hair-accessory",
+        "crochet-hat",
+        "daisy-bucket-hat"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "2026-09-04"
+    },
+    {
+      "id": "daisy-hair-clutcher-001",
+      "name": "Daisy Hair Clutcher",
+      "category": "hair accessories",
+      "price": 299,
+      "originalPrice": 399,
+      "badge": null,
+      "shortDescription": "A delicate handmade crochet flower hair clutcher with blue/pink blooms, green leaves and pearl accents, a little floral detail for your everyday look.",
+      "description": "Add a soft, feminine touch to your hairstyle with our Crochet Flower Hair Clutcher. Featuring layered blue crochet flowers, tiny green leaves and subtle pearl embellishments, this statement accessory turns even a simple ponytail or bun into a pretty, effortless look. Handmade with care, it’s perfect for everyday styling, festive outfits, brunches, picnics and gifting.",
+      "details": {
+        "Material": "Premium cotton yarn",
+        "Washable": "Not washable",
+        "Made to order": "5-7 business days"
+      },
+      "colors": [
+        "Pink",
+        "Blue"
+      ],
+      "thumbnail": "images/thumbnails/daisy-hair-clutcher-001-thumb.jpg",
+      "images": [
+        "images/products/daisy-hair-clutcher-001-main.jpg",
+        "images/products/daisy-hair-clutcher-001-side.jpg",
+        "images/products/daisy-hair-clutcher-001-side1.jpg",
+        "images/products/daisy-hair-clutcher-001-side2.jpg"
+      ],
+      "tags": [
+        "hair-accessory",
+        "gift",
+        "hair-clutcher",
+        "hair-clip"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "2026-09-04"
+    },
+    {
+      "id": "single-flower-clutcher-001",
+      "name": "Single Flower Clutcher",
+      "category": "hair accessories",
+      "price": 199,
+      "originalPrice": 249,
+      "badge": null,
+      "shortDescription": "A cute handmade single-flower crochet clutcher with layered blue/pink petals and a delicate pearl centre.",
+      "description": "Keep your hairstyle effortlessly pretty with our Single Flower Crochet Clutcher. Featuring one beautifully layered crochet flower in soft blue with a pearl centre, this minimal yet eye-catching accessory adds a subtle floral touch to your everyday look. The sturdy claw clip makes it easy to style with a ponytail, bun or half-up hairstyle. Perfect for everyday wear, gifting or adding a handmade touch to your outfit.",
+      "details": {
+        "Material": "Premium cotton yarn",
+        "Washable": "Not washable",
+        "Made to order": "5-7 business days"
+      },
+      "colors": [
+        "Blue",
+        "Pink"
+      ],
+      "thumbnail": "images/thumbnails/single-flower-clutcher-001-thumb.jpg",
+      "images": [
+        "images/products/single-flower-clutcher-001-main.jpg",
+        "images/products/single-flower-clutcher-001-side.jpg"
+      ],
+      "tags": [
+        "hair-accessory",
+        "gift",
+        "hair-clutcher",
+        "hair-clip"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "2026-09-04"
     }
   ]
 }
