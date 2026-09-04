@@ -1,9 +1,9 @@
 /**
- * build.js — Single build script for crochetbysailee
- * 
- * npm run build          → full build (images + fonts + patch HTML)
- * npm run images         → regenerate SVG placeholders only
- * npm run fonts          → re-download Google Fonts only
+ * build.js  -  Single build script for crochetbysailee
+ * -----------------------------------------------------------------------------
+ * npm run build          -> full build (images + fonts + patch HTML)
+ * npm run images         -> regenerate SVG placeholders only
+ * npm run fonts          -> re-download Google Fonts only
  *
  * What it does:
  *  1. Reads docs/data/products.json for product/theme config
@@ -12,7 +12,7 @@
  *  4. Downloads Google Fonts (woff2) to docs/fonts/
  *  5. Generates docs/css/fonts.css with @font-face rules
  *  6. Patches HTML to use local fonts instead of Google CDN
- * 
+ * -----------------------------------------------------------------------------
  */
 
 const https = require('https');
@@ -33,13 +33,13 @@ const IMAGES_ONLY = args.includes('--images-only');
 const FONTS_ONLY  = args.includes('--fonts-only');
 const FULL        = !IMAGES_ONLY && !FONTS_ONLY;
 
-//  Logging 
+// -- Logging ----------------------------------------------------------------
 const ok   = msg => console.log('  ✓ ' + msg);
-const info = msg => console.log('  → ' + msg);
+const info = msg => console.log('  -> ' + msg);
 const err  = msg => console.log('  ✗ ' + msg);
 const head = msg => console.log('\n' + msg);
 
-//  HTTP helper 
+// -- HTTP helper ------------------------------------------------------------
 function get(reqUrl) {
   return new Promise((resolve, reject) => {
     const parsed = new URL(reqUrl);
@@ -58,10 +58,12 @@ function get(reqUrl) {
 }
 const getText = url => get(url).then(b => b.toString('utf8'));
 
-// ── Ensure dir 
+// -- Ensure dir -------------------------------------------------------------
 function mkdirp(dir) { fs.mkdirSync(dir, { recursive: true }); }
 
-// STEP 1 — SVG Image Generation
+// -------------------------------------------------------------------------
+// STEP 1  -  SVG Image Generation
+// -------------------------------------------------------------------------
 
 function buildImages(products) {
   head('[ Step 1 ] Generating SVG placeholder images');
@@ -193,7 +195,9 @@ function buildImages(products) {
   ok(`Generated ${count} SVG files`);
 }
 
-// STEP 2 — Font Download
+// -------------------------------------------------------------------------
+// STEP 2  -  Font Download
+// -------------------------------------------------------------------------
 
 async function buildFonts(theme) {
   head('[ Step 2 ] Downloading Google Fonts locally');
@@ -212,14 +216,14 @@ async function buildFonts(theme) {
 
   const GFONTS_URL = `https://fonts.googleapis.com/css2?${families}&display=swap`;
 
-  info('Fetching font CSS from Google…');
+  info('Fetching font CSS from Google...');
   let css;
   try {
     css = await getText(GFONTS_URL);
     ok('Font CSS received');
   } catch (e) {
     err('Cannot reach Google Fonts: ' + e.message);
-    err('Skipping font download — existing fonts will be used');
+    err('Skipping font download  -  existing fonts will be used');
     return;
   }
 
@@ -244,8 +248,8 @@ async function buildFonts(theme) {
   }
   ok(`Parsed ${faces.length} font variants`);
 
-  // Download each font file — use index to avoid name collisions across subsets
-  info(`Downloading ${faces.length} font files…`);
+  // Download each font file  -  use index to avoid name collisions across subsets
+  info(`Downloading ${faces.length} font files...`);
   const saved = [];
   for (let i = 0; i < faces.length; i++) {
     const f    = faces[i];
@@ -255,7 +259,7 @@ async function buildFonts(theme) {
       fs.writeFileSync(dest, await get(f.srcUrl));
       saved.push({ ...f, file });
     } catch (e) {
-      err(`Failed: ${file} — ${e.message}`);
+      err(`Failed: ${file}  -  ${e.message}`);
     }
   }
   ok(`${saved.length} font files saved to docs/fonts/`);
@@ -284,14 +288,16 @@ async function buildFonts(theme) {
   }
 }
 
+// -------------------------------------------------------------------------
 // MAIN
+// -------------------------------------------------------------------------
 
 (async function main() {
-  console.log('\n----------');
-  console.log('  crochetbysailee — Build');
+  console.log('\n--------------------------------------------');
+  console.log('  crochetbysailee  -  Build');
   if (IMAGES_ONLY) console.log('  Mode: images only');
   if (FONTS_ONLY)  console.log('  Mode: fonts only');
-  console.log('----------');
+  console.log('--------------------------------------------');
 
   // Read config
   if (!fs.existsSync(DATA_FILE)) {
@@ -306,9 +312,9 @@ async function buildFonts(theme) {
   if (FULL || IMAGES_ONLY) buildImages(products);
   if (FULL || FONTS_ONLY)  await buildFonts(theme);
 
-  console.log('\n----------');
-  console.log('  Build complete — docs/ is ready to deploy');
-  console.log('----------\n');
+  console.log('\n--------------------------------------------');
+  console.log('  Build complete  -  docs/ is ready to deploy');
+  console.log('--------------------------------------------\n');
 
   if (FULL) {
     console.log('  Next steps:\n');

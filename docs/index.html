@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>crochetbysailee — Handcrafted Crochet</title>
+  <title>crochetbysailee - Handcrafted Crochet</title>
   <link rel="stylesheet" href="css/fonts.css" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <!--  NAV  -->
+  <!-- -- NAV ------------------------------------------------------------ -->
   <nav class="nav" id="nav">
     <div class="nav__inner container">
       <a class="nav__logo" href="index.html">
@@ -27,7 +27,17 @@
     </div>
   </nav>
 
-  <!--  HERO  -->
+  <!-- Mobile nav overlay at body level so it escapes nav stacking context -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
+    <ul class="mobile-overlay__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#catalog">Shop</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- -- HERO ----------------------------------------------------------- -->
   <header class="hero" id="hero">
     <div class="hero__bg-pattern" aria-hidden="true"></div>
     <div class="hero__floating-yarns" aria-hidden="true">
@@ -37,13 +47,13 @@
       <div class="yarn yarn--4"></div>
     </div>
     <div class="hero__image-wrap" id="heroImageWrap" aria-hidden="true">
-        <img class="hero__image" id="heroImage" src="" alt="" />
+      <img class="hero__image" id="heroImage" src="" alt="" />
     </div>
     <div class="hero__content container">
       <p class="hero__eyebrow reveal">Handmade with heart</p>
       <span class="hero__brand-name reveal">crochetbysailee</span>
       <h1 class="hero__headline reveal" id="heroHeadline">Every stitch tells a story</h1>
-      <p class="hero__sub reveal" id="heroSub">Handmade crochet pieces crafted with love, warmth, and care — made to order, just for you</p>
+      <p class="hero__sub reveal" id="heroSub">Handmade crochet pieces crafted with love, warmth, and care  -  made to order, just for you</p>
       <a href="#catalog" class="btn btn--primary reveal" id="heroCta">Explore Collection</a>
     </div>
     <div class="hero__scroll-hint" aria-hidden="true">
@@ -51,17 +61,17 @@
     </div>
   </header>
 
-  <!--  MARQUEE STRIP  -->
+  <!-- -- MARQUEE STRIP --------------------------------------------------- -->
   <div class="marquee-strip" aria-hidden="true">
     <div class="marquee-track">
-      <span>✦ Handmade</span><span>✦ Made to Order</span><span>✦ Premium Yarn</span>
-      <span>✦ Gift Ready</span><span>✦ Customisable</span><span>✦ Ships India-wide</span>
-      <span>✦ Handmade</span><span>✦ Made to Order</span><span>✦ Premium Yarn</span>
-      <span>✦ Gift Ready</span><span>✦ Customisable</span><span>✦ Ships India-wide</span>
+      <span>* Handmade</span><span>* Made to Order</span><span>* Premium Yarn</span>
+      <span>* Gift Ready</span><span>* Customisable</span><span>* Ships India-wide</span>
+      <span>* Handmade</span><span>* Made to Order</span><span>* Premium Yarn</span>
+      <span>* Gift Ready</span><span>* Customisable</span><span>* Ships India-wide</span>
     </div>
   </div>
 
-  <!--  FEATURED  -->
+  <!-- -- FEATURED -------------------------------------------------------- -->
   <section class="section" id="featured">
     <div class="container">
       <div class="section__header">
@@ -72,7 +82,7 @@
     </div>
   </section>
 
-  <!--  CATALOG  -->
+  <!-- -- CATALOG --------------------------------------------------------- -->
   <section class="section section--tinted" id="catalog">
     <div class="container">
       <div class="section__header">
@@ -83,11 +93,11 @@
         <button class="filter-btn active" data-category="all">All</button>
       </div>
       <div class="catalog-toolbar">
-        <span class="catalog-count" id="catalogCount">Loading…</span>
+        <span class="catalog-count" id="catalogCount">Loading...</span>
         <select class="sort-select" id="sortSelect">
           <option value="">Sort by</option>
-          <option value="price-asc">Price: Low → High</option>
-          <option value="price-desc">Price: High → Low</option>
+          <option value="price-asc">Price: Low -> High</option>
+          <option value="price-desc">Price: High -> Low</option>
           <option value="newest">Newest</option>
         </select>
       </div>
@@ -100,7 +110,7 @@
     </div>
   </section>
 
-  <!--  ABOUT  -->
+  <!-- -- ABOUT ----------------------------------------------------------- -->
   <section class="section about" id="about">
     <div class="container about__inner">
       <div class="about__visual" aria-hidden="true">
@@ -111,20 +121,33 @@
         </div>
       </div>
       <div class="about__text">
-        <p class="section__eyebrow">Our story</p>
-        <h2 class="section__title">Made with intention,<br/>stitched with love</h2>
-        <p>Every piece in our collection starts with a single strand of yarn and a hook. We source only the finest cotton, wool, and bamboo blends — soft enough for babies, durable enough for everyday use.</p>
-        <p>Each item is made to order, which means it's crafted fresh just for you. No mass production, no shortcuts — only genuine handmade work delivered with care.</p>
-        <div class="about__stats">
+        <p class="section__eyebrow" id="aboutEyebrow">Our story</p>
+        <h2 class="section__title" id="aboutHeadline">Made with intention,<br/>stitched with love</h2>
+        <p id="aboutPara1">Every piece in our collection starts with a single strand of yarn and a hook.</p>
+        <p id="aboutPara2">Each item is made to order, which means it's crafted fresh just for you.</p>
+        <div class="about__stats" id="aboutStats">
           <div class="about__stat"><span class="about__stat-num">500+</span><span>Happy customers</span></div>
           <div class="about__stat"><span class="about__stat-num">50+</span><span>Unique designs</span></div>
-          <div class="about__stat"><span class="about__stat-num">5★</span><span>Avg. rating</span></div>
+          <div class="about__stat"><span class="about__stat-num">5*</span><span>Avg. rating</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!--  CONTACT  -->
+  <!-- -- FOUNDERS -------------------------------------------------------- -->
+  <section class="section section--tinted founders" id="founders">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">The people behind the stitches</p>
+        <h2 class="section__title">Meet the founders</h2>
+      </div>
+      <div class="founders-grid" id="foundersGrid">
+        <!-- injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- -- CONTACT --------------------------------------------------------- -->
   <section class="section section--tinted contact" id="contact">
     <div class="container">
       <div class="section__header">
@@ -132,27 +155,27 @@
         <h2 class="section__title">We'd love to hear from you</h2>
       </div>
       <div class="contact__grid">
-        <div class="contact__card">
-          <span class="contact__icon">📧</span>
+        <a class="contact__card" id="contactEmailCard" href="#">
+          <span class="contact__icon">Email</span>
           <h3>Email</h3>
           <p id="contactEmail">hello@crochetbysailee.in</p>
-        </div>
-        <div class="contact__card">
-          <span class="contact__icon">📷</span>
+        </a>
+        <a class="contact__card" id="contactIgCard" href="#" target="_blank" rel="noopener">
+          <span class="contact__icon">Photo</span>
           <h3>Instagram</h3>
           <p id="contactIg">@crochetbysailee</p>
-        </div>
-        <div class="contact__card">
-          <span class="contact__icon">💬</span>
+        </a>
+        <a class="contact__card" id="contactWaCard" href="#" target="_blank" rel="noopener">
+          <span class="contact__icon">Chat</span>
           <h3>WhatsApp</h3>
           <p id="contactWa">+91 98765 43210</p>
-        </div>
+        </a>
       </div>
-      <p class="contact__note">Custom orders welcome — just send us a message!</p>
+      <p class="contact__note">Custom orders welcome  -  just send us a message!</p>
     </div>
   </section>
 
-  <!--  FOOTER  -->
+  <!-- -- FOOTER ---------------------------------------------------------- -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">

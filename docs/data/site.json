@@ -1,0 +1,42 @@
+{
+  "name":    "crochetbysailee",
+  "tagline": "Handcrafted Crochet Artistry",
+  "logo":    "images/logo.jpg",
+  "currency": "₹",
+  "hero": {
+    "headline":    "Every stitch tells a story",
+    "subheadline": "Handmade crochet pieces crafted with love, warmth, and care - made to order, just for you",
+    "cta":         "Explore Collection",
+    "image":       ""
+  },
+  "footer": {
+    "tagline": "Made with 100% love, one stitch at a time."
+  },
+  "theme": {
+    "colors": {
+      "primary":      "#1B7878",
+      "primaryDark":  "#145F5F",
+      "primaryLight": "#2A9898",
+      "primaryXL":    "#D6EEEE",
+      "accent":       "#E8C97A",
+      "accentDark":   "#C9A94A",
+      "bg":           "#F7F2EA",
+      "bgTint":       "#EDE7DA",
+      "text":         "#1A2E2E",
+      "textMuted":    "#3D5F5F",
+      "border":       "#C4D9D9",
+      "success":      "#2A8A5A"
+    },
+    "fonts": {
+      "serif":  "Playfair Display",
+      "sans":   "Inter",
+      "script": "Dancing Script"
+    },
+    "nav": {
+      "height": "80px"
+    },
+    "marquee": {
+      "text": "* Handmade | * Made to Order | * Premium Yarn | * Gift Ready | * Customisable | * Ships India-wide"
+    }
+  }
+}

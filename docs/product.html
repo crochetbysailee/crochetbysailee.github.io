@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product — crochetbysailee</title>
+  <title>Product  -  crochetbysailee</title>
   <link rel="stylesheet" href="css/fonts.css" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="product-page">
 
-  <!--  NAV  -->
+  <!-- -- NAV ------------------------------------------------------------ -->
   <nav class="nav" id="nav">
     <div class="nav__inner container">
       <a class="nav__logo" href="index.html">
@@ -27,49 +27,62 @@
     </div>
   </nav>
 
-  <!--  BREADCRUMB  -->
-  <div class="breadcrumb container">
-    <a href="index.html">Home</a>
-    <span class="breadcrumb__sep">›</span>
-    <a href="index.html#catalog">Shop</a>
-    <span class="breadcrumb__sep">›</span>
-    <span id="breadcrumbProduct">Loading…</span>
+  <!-- Mobile nav overlay at body level -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
+    <ul class="mobile-overlay__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#catalog">Shop</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
   </div>
 
-  <!--  PRODUCT DETAIL  -->
+  <!-- -- BREADCRUMB ------------------------------------------------------ -->
+  <div class="breadcrumb container">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb__sep">></span>
+    <a href="index.html#catalog">Shop</a>
+    <span class="breadcrumb__sep">></span>
+    <span id="breadcrumbProduct">Loading...</span>
+  </div>
+
+  <!-- -- PRODUCT DETAIL -------------------------------------------------- -->
   <main class="pdp container" id="pdp">
     <div class="pdp__gallery" id="pdpGallery">
       <div class="gallery__main-wrap">
         <img class="gallery__main" id="galleryMain" src="" alt="" />
-        <button class="gallery__zoom-btn" id="galleryZoomBtn" aria-label="Zoom image">⤢</button>
+        <button class="gallery__zoom-btn" id="galleryZoomBtn" aria-label="Zoom image">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M1 7V1h6M11 1h6v6M17 11v6h-6M7 17H1v-6"/>
+          </svg>
+        </button>
       </div>
       <div class="gallery__thumbs" id="galleryThumbs"></div>
     </div>
 
     <div class="pdp__info" id="pdpInfo">
       <div class="pdp__badge-row">
-        <span class="pdp__category" id="pdpCategory">—</span>
+        <span class="pdp__category" id="pdpCategory"> - </span>
         <span class="pdp__badge" id="pdpBadge" hidden></span>
       </div>
-      <h1 class="pdp__name" id="pdpName">Loading…</h1>
+      <h1 class="pdp__name" id="pdpName">Loading...</h1>
       <div class="pdp__price-row">
-        <span class="pdp__price" id="pdpPrice">—</span>
+        <span class="pdp__price" id="pdpPrice"> - </span>
         <span class="pdp__original" id="pdpOriginal" hidden></span>
         <span class="pdp__discount" id="pdpDiscount" hidden></span>
       </div>
-      <p class="pdp__desc" id="pdpDesc">—</p>
+      <p class="pdp__desc" id="pdpDesc"> - </p>
       <div class="pdp__option" id="colorSection">
         <span class="pdp__option-label">Colour: <strong id="selectedColor"></strong></span>
         <div class="color-swatches" id="colorSwatches"></div>
       </div>
       <div class="pdp__cta">
         <button class="btn btn--primary btn--lg" id="orderBtn">Order via WhatsApp</button>
-        <button class="btn btn--outline" id="wishlistBtn">♡ Save</button>
       </div>
-      <p class="pdp__delivery">🚚 Made to order — ships in <span id="pdpLeadTime">3–5</span> business days</p>
+      <p class="pdp__delivery"> Made to order  -  ships in <span id="pdpLeadTime">3-5</span> business days</p>
       <div class="accordion" id="detailsAccordion">
         <button class="accordion__head" id="detailsToggle">
-          Product Details <span class="accordion__chevron">›</span>
+          Product Details <span class="accordion__chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,2 10,7 4,12"/></svg></span>
         </button>
         <div class="accordion__body" id="detailsBody">
           <table class="details-table" id="detailsTable"></table>
@@ -77,7 +90,7 @@
       </div>
       <div class="accordion">
         <button class="accordion__head" id="careToggle">
-          Care & Washing <span class="accordion__chevron">›</span>
+          Care & Washing <span class="accordion__chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,2 10,7 4,12"/></svg></span>
         </button>
         <div class="accordion__body" id="careBody">
           <p>All our pieces are handmade and require gentle care. Follow the specific washing instructions in the product details. When in doubt, hand wash in cold water with a mild detergent and lay flat to dry away from direct sunlight.</p>
@@ -86,13 +99,28 @@
     </div>
   </main>
 
-  <!--  ZOOM MODAL  -->
+  <!-- -- ZOOM MODAL (full gallery viewer) -------------------------------- -->
   <div class="zoom-modal" id="zoomModal" hidden>
-    <button class="zoom-modal__close" id="zoomClose">✕</button>
+    <button class="zoom-modal__close" id="zoomClose">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="2" y1="2" x2="14" y2="14"/><line x1="14" y1="2" x2="2" y2="14"/>
+      </svg>
+    </button>
+    <button class="zoom-modal__nav zoom-modal__nav--prev" id="zoomPrev">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="13,4 7,10 13,16"/>
+      </svg>
+    </button>
     <img class="zoom-modal__img" id="zoomImg" src="" alt="" />
+    <button class="zoom-modal__nav zoom-modal__nav--next" id="zoomNext">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="7,4 13,10 7,16"/>
+      </svg>
+    </button>
+    <div class="zoom-modal__counter" id="zoomCounter">1 / 4</div>
   </div>
 
-  <!--  RELATED  -->
+  <!-- -- RELATED --------------------------------------------------------- -->
   <section class="section" id="relatedSection">
     <div class="container">
       <div class="section__header">
@@ -103,7 +131,7 @@
     </div>
   </section>
 
-  <!--  FOOTER  -->
+  <!-- -- FOOTER ---------------------------------------------------------- -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
