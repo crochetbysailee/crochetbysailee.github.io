@@ -730,7 +730,16 @@ ul { list-style: none; }
   border-color: var(--clr-primary);
   transform: translateY(-4px);
 }
-.contact__icon { font-size: 2rem; display: block; margin-bottom: .75rem; }
+.contact__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px; height: 56px;
+  background: var(--clr-primary-xl);
+  border-radius: 50%;
+  margin: 0 auto .9rem;
+  color: var(--clr-primary);
+}
 .contact__card h3 {
   font-family: var(--ff-serif);
   font-size: 1.1rem;
