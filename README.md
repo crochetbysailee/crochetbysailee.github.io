@@ -4,4 +4,3 @@
 ### Setup Steps
 
 npm run data
-npn run build
