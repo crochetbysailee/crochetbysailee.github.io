@@ -1,9 +1,8 @@
-/*  product.js  (GitHub Pages static version)  */
+/* -- product.js  (GitHub Pages static version) ------------------------- */
 
-const DATA_URL = 'data/products.json';
-const currency = '₹';
+let currency = '₹';
 
-//  Bootstrap 
+// -- Bootstrap --------------------------------------------------------------
 (async function init() {
   setupNav();
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -12,24 +11,26 @@ const currency = '₹';
   if (!id) { location.href = 'index.html'; return; }
 
   try {
-    const [data, contact] = await Promise.all([
-      fetch(DATA_URL, { cache: 'no-cache' }).then(r => r.json()),
-      fetch('data/contact.json', { cache: 'no-cache' }).then(r => r.json())
+    const [prods, site, contact] = await Promise.all([
+      fetch('data/products.json', { cache: 'no-cache' }).then(r => r.json()),
+      fetch('data/site.json',     { cache: 'no-cache' }).then(r => r.json()),
+      fetch('data/contact.json',  { cache: 'no-cache' }).then(r => r.json()),
     ]);
-    const product = data.products.find(p => p.id === id);
+    const product = prods.products.find(p => p.id === id);
     if (!product) throw new Error('Not found');
 
-    document.title = `${product.name} — ${data.site.name}`;
-    if (data.site.theme) applyTheme(data.site.theme);
+    currency = site.currency || '₹';
+    document.title = `${product.name} - ${site.name}`;
+    if (site.theme) applyTheme(site.theme);
     renderProduct(product, contact);
-    loadRelated(product, data.products);
+    loadRelated(product, prods.products);
   } catch {
     document.getElementById('pdp').innerHTML =
-      '<p style="text-align:center;padding:4rem 0;color:var(--clr-text-2)">Product not found. <a href="index.html" style="color:var(--clr-primary)">Go back →</a></p>';
+      '<p style="text-align:center;padding:4rem 0;color:var(--clr-text-2)">Product not found. <a href="index.html" style="color:var(--clr-primary)">Go back -></a></p>';
   }
 })();
 
-//  Nav 
+// -- Nav --------------------------------------------------------------------
 function setupNav() {
   const nav   = document.getElementById('nav');
   const ham   = document.getElementById('hamburger');
@@ -37,10 +38,26 @@ function setupNav() {
   window.addEventListener('scroll', () => {
     nav?.classList.toggle('scrolled', window.scrollY > 20);
   }, { passive: true });
-  ham?.addEventListener('click', () => links?.classList.toggle('open'));
+  const overlay = document.getElementById('mobileOverlay');
+
+  function toggleMenu() {
+    const isOpen = overlay?.classList.toggle('open');
+    ham.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+
+  ham?.addEventListener('click', toggleMenu);
+
+  overlay?.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      overlay.classList.remove('open');
+      ham.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
 }
 
-//  Render product 
+// -- Render product ---------------------------------------------------------
 function renderProduct(p, contact = {}) {
   document.getElementById('breadcrumbProduct').textContent = p.name;
 
@@ -62,21 +79,52 @@ function renderProduct(p, contact = {}) {
     switchImage(thumb.dataset.src, thumb);
   });
 
-  // Zoom
-  const zoomBtn   = document.getElementById('galleryZoomBtn');
-  const zoomModal = document.getElementById('zoomModal');
-  const zoomImg   = document.getElementById('zoomImg');
-  const zoomClose = document.getElementById('zoomClose');
+  // Zoom gallery modal
+  const zoomBtn     = document.getElementById('galleryZoomBtn');
+  const zoomModal   = document.getElementById('zoomModal');
+  const zoomImg     = document.getElementById('zoomImg');
+  const zoomClose   = document.getElementById('zoomClose');
+  const zoomPrev    = document.getElementById('zoomPrev');
+  const zoomNext    = document.getElementById('zoomNext');
+  const zoomCounter = document.getElementById('zoomCounter');
+  const images      = p.images || [];
+  let zoomIdx = 0;
 
-  zoomBtn.addEventListener('click', () => {
-    zoomImg.src = mainImg.src;
+  function openZoom(idx) {
+    zoomIdx = idx;
+    zoomImg.style.opacity = '0';
+    setTimeout(() => {
+      zoomImg.src = images[zoomIdx];
+      zoomImg.alt = `${p.name} view ${zoomIdx + 1}`;
+      zoomImg.style.opacity = '1';
+    }, 100);
+    zoomCounter.textContent = `${zoomIdx + 1} / ${images.length}`;
+    zoomPrev.disabled = zoomIdx === 0;
+    zoomNext.disabled = zoomIdx === images.length - 1;
     zoomModal.hidden = false;
     document.body.style.overflow = 'hidden';
+  }
+
+  function closeZoom() { zoomModal.hidden = true; document.body.style.overflow = ''; }
+
+  zoomBtn.addEventListener('click', () => {
+    const activeThumb = document.querySelector('.gallery__thumb.active');
+    const activeIdx   = [...document.querySelectorAll('.gallery__thumb')].indexOf(activeThumb);
+    openZoom(Math.max(0, activeIdx));
   });
-  const closeZoom = () => { zoomModal.hidden = true; document.body.style.overflow = ''; };
+
+  zoomPrev.addEventListener('click', e => { e.stopPropagation(); if (zoomIdx > 0) openZoom(zoomIdx - 1); });
+  zoomNext.addEventListener('click', e => { e.stopPropagation(); if (zoomIdx < images.length - 1) openZoom(zoomIdx + 1); });
   zoomClose.addEventListener('click', closeZoom);
   zoomModal.addEventListener('click', e => { if (e.target === zoomModal) closeZoom(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeZoom(); });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (zoomModal.hidden) return;
+    if (e.key === 'Escape')     closeZoom();
+    if (e.key === 'ArrowLeft'  && zoomIdx > 0)              openZoom(zoomIdx - 1);
+    if (e.key === 'ArrowRight' && zoomIdx < images.length - 1) openZoom(zoomIdx + 1);
+  });
 
   // Info
   document.getElementById('pdpCategory').textContent = capitalize(p.category);
@@ -84,7 +132,7 @@ function renderProduct(p, contact = {}) {
   document.getElementById('pdpDesc').textContent      = p.description;
   document.getElementById('pdpPrice').textContent     = `${currency}${p.price}`;
 
-  const leadTime = (p.details['Made to order'] || '3–5 business days')
+  const leadTime = (p.details['Made to order'] || '3-5 business days')
     .replace(/\s*business days?/i, '');
   document.getElementById('pdpLeadTime').textContent = leadTime;
 
@@ -120,7 +168,7 @@ function renderProduct(p, contact = {}) {
     });
   }
 
-  // WhatsApp order — number from config (digits only)
+  // WhatsApp order  -  number from config (digits only)
   document.getElementById('orderBtn').addEventListener('click', () => {
     const color  = document.getElementById('selectedColor').textContent;
     const waNum  = (contact.whatsapp || '').replace(/\D/g, '');
@@ -128,14 +176,6 @@ function renderProduct(p, contact = {}) {
       `Hi! I'd like to order:\n\n*${p.name}*\nColour: ${color}\nPrice: ${currency}${p.price}\n\nPlease let me know the details!`
     );
     window.open(`https://wa.me/${waNum}?text=${text}`, '_blank');
-  });
-
-  // Wishlist toggle (cosmetic)
-  const wishBtn = document.getElementById('wishlistBtn');
-  wishBtn.addEventListener('click', () => {
-    const saved = wishBtn.textContent.includes('♡');
-    wishBtn.textContent = saved ? '♥ Saved' : '♡ Save';
-    wishBtn.style.color = saved ? 'var(--clr-primary)' : '';
   });
 
   // Details table + accordions
@@ -151,13 +191,13 @@ function switchImage(src, thumbEl) {
   thumbEl?.classList.add('active');
 }
 
-//  Details table 
+// -- Details table ----------------------------------------------------------
 function buildDetailsTable(details) {
   document.getElementById('detailsTable').innerHTML =
     Object.entries(details).map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('');
 }
 
-//  Accordions 
+// -- Accordions -------------------------------------------------------------
 function buildAccordions() {
   document.querySelectorAll('.accordion__head').forEach(head => {
     head.addEventListener('click', () => {
@@ -169,7 +209,7 @@ function buildAccordions() {
   });
 }
 
-//  Related products 
+// -- Related products -------------------------------------------------------
 function loadRelated(current, allProducts) {
   const related = allProducts
     .filter(p => p.id !== current.id && p.category === current.category)
@@ -195,13 +235,13 @@ function loadRelated(current, allProducts) {
         <h3 class="product-card__name">${p.name}</h3>
         <div class="product-card__footer">
           <span class="product-card__price">${currency}${p.price}</span>
-          <span class="btn btn--sm btn--outline">View →</span>
+          <span class="btn btn--sm btn--outline">View -></span>
         </div>
       </div>
     </article>`).join('');
 }
 
-//  Theme 
+// -- Theme ------------------------------------------------------------------
 function applyTheme(theme) {
   const root = document.documentElement;
   const { colors, fonts, nav } = theme;
@@ -224,5 +264,5 @@ function applyTheme(theme) {
   if (nav?.height) root.style.setProperty('--nav-h', nav.height);
 }
 
-//  Utils 
+// -- Utils ------------------------------------------------------------------
 function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
