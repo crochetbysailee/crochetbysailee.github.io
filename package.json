@@ -8,7 +8,8 @@
     "dev":    "npx nodemon server.js",
     "build":  "node build.js",
     "images": "node build.js --images-only",
-    "fonts":  "node build.js --fonts-only"
+    "fonts":  "node build.js --fonts-only",
+    "data":   "node data-to-json.js"
   },
   "dependencies": {
     "express": "^4.18.2",

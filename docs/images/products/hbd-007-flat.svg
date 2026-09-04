@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
   <defs>
-    <linearGradient id="bgflatuem7" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgflatz9mk" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#E8F4F4"/>
       <stop offset="100%" style="stop-color:#D8ECEC"/>
     </linearGradient>
-    <radialGradient id="spflatuem7" cx="50%" cy="45%" r="55%">
+    <radialGradient id="spflatz9mk" cx="50%" cy="45%" r="55%">
       <stop offset="0%" style="stop-color:white;stop-opacity:0.35"/>
       <stop offset="100%" style="stop-color:transparent"/>
     </radialGradient>
   </defs>
-  <rect width="800" height="800" fill="url(#bgflatuem7)"/>
-  <rect width="800" height="800" fill="url(#spflatuem7)"/>
+  <rect width="800" height="800" fill="url(#bgflatz9mk)"/>
+  <rect width="800" height="800" fill="url(#spflatz9mk)"/>
   <circle cx="400" cy="370" r="210" fill="#1B7878" opacity="0.1"/>
   <circle cx="400" cy="370" r="130" fill="white"     opacity="0.35"/>
   <text x="400" y="415" font-family="sans-serif" font-size="130" text-anchor="middle">🎩</text>

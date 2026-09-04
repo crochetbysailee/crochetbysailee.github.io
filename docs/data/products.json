@@ -7,305 +7,35 @@
       "price": 899,
       "originalPrice": 999,
       "badge": "New",
-      "shortDescription": "Keep your favourite reads cozy and protected with our handmade crochet daisy book sleeve",
+      "shortDescription": "Huggable hand-crocheted teddy bear in soft cotton yarn",
       "description": "A cute, handmade crochet book sleeve featuring a dreamy blue-and-white daisy design. Carefully crocheted with soft yarn, it’s perfect for keeping your books protected from scratches, dust and minor bumps while adding a little personality to your reading routine",
       "details": {
-        "Material": "premium acrylic yarn",
-        "Height": "22 cm",
-        "Washable": "Hand wash, lay flat to dry",
-        "Made to order": "5-7 business days"
+        "Material": "Premium acrylic yarn",
+        "Height": "1 inch",
+        "Washable": "Hand wash lay flat to dry",
+        "Made to order": "5-7 business days",
+        "Quantity": "1",
+        "Length": "9 inches",
+        "Width": "6 inches"
       },
-      "colors": ["Blue", "Yellow"],
+      "colors": [
+        "Blue",
+        "Yellow"
+      ],
       "thumbnail": "images/thumbnails/book-sleeve-001-thumb.jpg",
       "images": [
         "images/products/book-sleeve-001-main.jpg",
         "images/products/book-sleeve-001-side.jpg"
       ],
-      "tags": ["gift", "bookworm", "booklover", "nerd"],
+      "tags": [
+        "gift",
+        "bookworm",
+        "booklover",
+        "nerd"
+      ],
       "featured": true,
       "inStock": true,
       "createdAt": "2026-09-03"
-    },
-    {
-      "id": "blk-002",
-      "name": "Cloud Baby Blanket",
-      "category": "blankets",
-      "price": 1499,
-      "originalPrice": 1799,
-      "badge": "New",
-      "shortDescription": "Ultra-soft stitch-pattern baby blanket in pastel hues",
-      "description": "Wrap your little one in pure warmth with our Cloud Stitch Baby Blanket. Worked in a luxuriously soft cloud-stitch pattern, this blanket is breathable, stretchy, and gentle on newborn skin. Available in a range of pastel and neutral tones to match any nursery aesthetic. Each blanket is blocked and finished with a neat border.",
-      "details": {
-        "Material": "100% bamboo cotton blend",
-        "Size": "90 x 70 cm",
-        "Made to order": "5-7 business days",
-        "Stitch": "Cloud / moss stitch",
-        "Blocking": "Professionally blocked"
-      },
-      "colors": [
-        "Mint",
-        "Lavender",
-        "Peach",
-        "Ivory"
-      ],
-      "thumbnail": "images/thumbnails/blk-002-thumb.svg",
-      "images": [
-        "images/products/blk-002-main.svg",
-        "images/products/blk-002-fold.svg",
-        "images/products/blk-002-detail.svg",
-        "images/products/blk-002-use.svg"
-      ],
-      "tags": [
-        "baby",
-        "shower gift",
-        "soft",
-        "blanket"
-      ],
-      "featured": true,
-      "inStock": true,
-      "createdAt": "2025-12-10"
-    },
-    {
-      "id": "hat-003",
-      "name": "Slouchy Ribbed Beanie",
-      "category": "accessories",
-      "price": 599,
-      "originalPrice": null,
-      "badge": null,
-      "shortDescription": "Stretchy ribbed beanie with oversized slouch  -  one size fits all",
-      "description": "A wardrobe staple for cooler days. Our Slouchy Ribbed Beanie is worked in a 3x3 rib pattern that gives it the perfect amount of stretch and structure. The generous slouch sits comfortably without being too floppy. Available in over a dozen yarn colours.",
-      "details": {
-        "Material": "Merino wool blend",
-        "Washable": "Hand wash cold",
-        "Made to order": "2-3 business days",
-        "Width": "27 cm (including slouch)",
-        "Weight": "Fits 52-60 cm heads"
-      },
-      "colors": [
-        "Charcoal",
-        "Camel",
-        "Forest Green",
-        "Burgundy",
-        "Cream"
-      ],
-      "thumbnail": "images/thumbnails/hat-003-thumb.svg",
-      "images": [
-        "images/products/hat-003-main.svg",
-        "images/products/hat-003-side.svg",
-        "images/products/hat-003-stack.svg",
-        "images/products/hat-003-detail.svg"
-      ],
-      "tags": [
-        "winter",
-        "hat",
-        "beanie",
-        "gift"
-      ],
-      "featured": true,
-      "inStock": true,
-      "createdAt": "2025-10-15"
-    },
-    {
-      "id": "bag-004",
-      "name": "Sunflower Market Bag",
-      "category": "bags",
-      "price": 899,
-      "originalPrice": 1099,
-      "badge": "Sale",
-      "shortDescription": "Open-weave cotton tote perfect for the farmers market",
-      "description": "Stylish and sustainable  -  our Sunflower Market Bag features a bold open-weave body in natural cotton with a sunflower motif patch crocheted at the base. Strong double handles are reinforced at the join.",
-      "details": {
-        "Material": "100% recycled cotton cord",
-        "Washable": "Machine wash air dry",
-        "Made to order": "3-4 business days",
-        "Circumference": "28 cm",
-        "Depth": "5 kg tested",
-        "Stretch": "40 x 45 cm"
-      },
-      "colors": [
-        "Natural + Yellow",
-        "Natural + Sage",
-        "Black + White"
-      ],
-      "thumbnail": "images/thumbnails/bag-004-thumb.svg",
-      "images": [
-        "images/products/bag-004-main.svg",
-        "images/products/bag-004-open.svg",
-        "images/products/bag-004-detail.svg",
-        "images/products/bag-004-use.svg"
-      ],
-      "tags": [
-        "bag",
-        "tote",
-        "eco",
-        "summer"
-      ],
-      "featured": false,
-      "inStock": true,
-      "createdAt": "2025-09-20"
-    },
-    {
-      "id": "cst-005",
-      "name": "Boho Coaster Set",
-      "category": "home",
-      "price": 449,
-      "originalPrice": null,
-      "badge": "Set of 4",
-      "shortDescription": "Mandala-pattern cotton coasters  -  set of 4 mixed colours",
-      "description": "Add a boho touch to your coffee table with our handmade mandala coasters. Each set of four coasters features the same intricate pattern worked in complementary yarn colours. Thick enough to protect surfaces, beautiful enough to be left out as decor.",
-      "details": {
-        "Material": "100% cotton yarn",
-        "Washable": "Machine wash tumble dry low",
-        "Made to order": "3-5 business days",
-        "Diameter": "10 cm each",
-        "Thickness": "~5 mm",
-        "Quantity": "4 coasters per set"
-      },
-      "colors": [
-        "Earth Tones",
-        "Ocean Blues",
-        "Blush & Ivory",
-        "Forest Mix"
-      ],
-      "thumbnail": "images/thumbnails/cst-005-thumb.svg",
-      "images": [
-        "images/products/cst-005-main.svg",
-        "images/products/cst-005-single.svg",
-        "images/products/cst-005-detail.svg",
-        "images/products/cst-005-style.svg"
-      ],
-      "tags": [
-        "home",
-        "coaster",
-        "gift",
-        "boho"
-      ],
-      "featured": false,
-      "inStock": true,
-      "createdAt": "2025-11-25"
-    },
-    {
-      "id": "scf-006",
-      "name": "Chunky Infinity Scarf",
-      "category": "accessories",
-      "price": 699,
-      "originalPrice": 849,
-      "badge": null,
-      "shortDescription": "Cosy oversized loop scarf in chunky arm-weight yarn",
-      "description": "A quick double-wrap around your neck and you're ready for the cold. Our Chunky Infinity Scarf is worked in a simple but stunning basketweave stitch using super-chunky arm-weight yarn, giving it incredible warmth and texture.",
-      "details": {
-        "Material": "Super chunky acrylic/wool blend",
-        "Washable": "Hand wash dry flat",
-        "Made to order": "1-2 business days",
-        "Quantity": "160 cm circumference",
-        "Length": "26 cm",
-        "Width": "~350 g"
-      },
-      "colors": [
-        "Oat",
-        "Terracotta",
-        "Navy",
-        "Stone Grey",
-        "Dusty Rose"
-      ],
-      "thumbnail": "images/thumbnails/scf-006-thumb.svg",
-      "images": [
-        "images/products/scf-006-main.svg",
-        "images/products/scf-006-texture.svg",
-        "images/products/scf-006-worn.svg",
-        "images/products/scf-006-flat.svg"
-      ],
-      "tags": [
-        "scarf",
-        "winter",
-        "cosy",
-        "chunky"
-      ],
-      "featured": true,
-      "inStock": true,
-      "createdAt": "2025-10-05"
-    },
-    {
-      "id": "hbd-007",
-      "name": "Flower Headband",
-      "category": "accessories",
-      "price": 349,
-      "originalPrice": null,
-      "badge": null,
-      "shortDescription": "Stretchy ear-warmer headband with a crocheted flower accent",
-      "description": "Keep your ears toasty without messing up your hair. This stretchy ribbed headband fits comfortably and securely topped with a hand-crocheted flower in a contrasting colour. Great for workouts school runs or just cosy days at home.",
-      "details": {
-        "Material": "Cotton/spandex blend yarn",
-        "Washable": "Machine wash cold",
-        "Made to order": "1-2 business days",
-        "Length": "7 cm at widest",
-        "Weight": "Fits 52-60 cm heads",
-        "Circumference": "Detachable on request"
-      },
-      "colors": [
-        "Cream + Blush",
-        "Grey + Yellow",
-        "Navy + Orange",
-        "Pink + White"
-      ],
-      "thumbnail": "images/thumbnails/hbd-007-thumb.svg",
-      "images": [
-        "images/products/hbd-007-main.svg",
-        "images/products/hbd-007-flat.svg",
-        "images/products/hbd-007-detail.svg",
-        "images/products/hbd-007-worn.svg"
-      ],
-      "tags": [
-        "headband",
-        "earwarmer",
-        "flower",
-        "cute"
-      ],
-      "featured": false,
-      "inStock": true,
-      "createdAt": "2025-12-01"
-    },
-    {
-      "id": "bbt-008",
-      "name": "Baby Booties Pair",
-      "category": "baby",
-      "price": 399,
-      "originalPrice": 499,
-      "badge": "Gift Ready",
-      "shortDescription": "Soft-soled crocheted booties for newborns to 6 months",
-      "description": "Tiny, soft, and utterly adorable  -  our Baby Booties come in newborn and 0-6 month sizes. Each pair is lovingly crocheted in smooth DK cotton with a non-slip textured sole and a sweet button or bow closure at the ankle.",
-      "details": {
-        "Material": "100% DK cotton yarn",
-        "Washable": "Hand wash dry flat",
-        "Made to order": "2-3 business days",
-        "Handle drop": "Textured non-slip pattern",
-        "Weight capacity": "Button or bow (specify at checkout)",
-        "Dimensions": "Newborn (9 cm) 0-6 months (11 cm)",
-        "Sole": "Metal swivel lobster clasp"
-      },
-      "colors": [
-        "Ivory",
-        "Blush Pink",
-        "Baby Blue",
-        "Mint",
-        "Lemon"
-      ],
-      "thumbnail": "images/thumbnails/bbt-008-thumb.svg",
-      "images": [
-        "images/products/bbt-008-main.svg",
-        "images/products/bbt-008-pair.svg",
-        "images/products/bbt-008-detail.svg",
-        "images/products/bbt-008-gift.svg"
-      ],
-      "tags": [
-        "baby",
-        "shower gift",
-        "booties",
-        "newborn"
-      ],
-      "featured": false,
-      "inStock": true,
-      "createdAt": "2025-11-15"
     }
   ]
 }
