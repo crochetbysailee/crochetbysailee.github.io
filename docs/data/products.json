@@ -7,7 +7,7 @@
       "price": 899,
       "originalPrice": 999,
       "badge": "New",
-      "shortDescription": "Huggable hand-crocheted teddy bear in soft cotton yarn",
+      "shortDescription": "Huggable hand-crocheted teddy bear in soft cotton yarn.",
       "description": "A cute, handmade crochet book sleeve featuring a dreamy blue-and-white/yellow-and-white daisy design. Carefully crocheted with soft yarn, it’s perfect for keeping your books protected from scratches, dust and minor bumps while adding a little personality to your reading routine.",
       "details": {
         "Material": "Premium acrylic yarn",
@@ -35,7 +35,7 @@
       ],
       "featured": true,
       "inStock": true,
-      "createdAt": "2026-09-03"
+      "createdAt": "03/09/2026"
     },
     {
       "id": "cherry-blossom-pot-001",
@@ -44,10 +44,10 @@
       "price": 999,
       "originalPrice": 1199,
       "badge": "New",
-      "shortDescription": "A handmade crochet flower pot with delicate pink blossoms",
+      "shortDescription": "A handmade crochet flower pot with delicate pink blossoms.",
       "description": "Bring a little spring indoors with this charming handmade crochet flower pot. Featuring delicate pink flowers, green leaves and a cozy neutral crochet pot, this piece is designed to add a soft, whimsical touch to your home or workspace.Unlike fresh flowers, this little arrangement never wilts, making it a beautiful keepsake or thoughtful gift for someone special.",
       "details": {
-        "Material": "Premium acrylic yarn",
+        "Material": "Premium acrylic yarn, floral stem",
         "Washable": "Not washable",
         "Made to order": "5-7 business days"
       },
@@ -67,7 +67,7 @@
       ],
       "featured": true,
       "inStock": true,
-      "createdAt": "2026-09-04"
+      "createdAt": "04/09/2026"
     },
     {
       "id": "rose-and-bottle-bouquet-001",
@@ -79,7 +79,7 @@
       "shortDescription": "A statement handmade bouquet featuring a crochet rose and a detailed crochet bottle replica, made to be gifted and kept forever.",
       "description": "A unique twist on the classic bouquet! This handmade arrangement features a vibrant crochet rose, detailed green leaves and a hand-crocheted bottle replica, beautifully arranged in an aesthetic newspaper-style wrap and finished with a golden ribbon. Unlike a traditional bouquet, every element is handmade and designed to be kept as a long-lasting keepsake. Perfect for birthdays, anniversaries, celebrations or simply surprising someone special.",
       "details": {
-        "Material": "Premium acrylic yarn",
+        "Material": "Premium acrylic yarn, floral stem",
         "Washable": "Not washable",
         "Made to order": "6-7 business days"
       },
@@ -99,7 +99,7 @@
       ],
       "featured": true,
       "inStock": true,
-      "createdAt": "2026-09-04"
+      "createdAt": "04/09/2026"
     },
     {
       "id": "sun-glow-claw-clip-001",
@@ -108,7 +108,7 @@
       "price": 499,
       "originalPrice": 599,
       "badge": null,
-      "shortDescription": "A statement crochet sunflower hair claw made to turn a simple hairstyle into a whole vibe",
+      "shortDescription": "A statement crochet sunflower hair claw made to turn a simple hairstyle into a whole vibe.",
       "description": "Add a little sunshine to your everyday hairstyle with this handmade crochet sunflower hair claw. Featuring layered sunflower blooms, green leaves and delicate pearl accents, this piece combines a playful floral look with an elegant touch.Perfect for ponytails, buns or half-up hairstyles, it’s a beautiful accessory for everyday outfits, festive looks, picnics, vacations and special occasions.",
       "details": {
         "Material": "Premium cotton yarn",
@@ -131,7 +131,7 @@
       ],
       "featured": true,
       "inStock": true,
-      "createdAt": "2026-09-04"
+      "createdAt": "04/09/2026"
     },
     {
       "id": "tulip-hair-clutcher-001",
@@ -163,7 +163,7 @@
       ],
       "featured": true,
       "inStock": true,
-      "createdAt": "2026-09-04"
+      "createdAt": "04/09/2026"
     },
     {
       "id": "sakura-claw-clip-001",
@@ -195,7 +195,7 @@
       ],
       "featured": true,
       "inStock": true,
-      "createdAt": "2026-09-04"
+      "createdAt": "04/09/2026"
     },
     {
       "id": "butterfly-claw-clip-001",
@@ -230,7 +230,7 @@
       ],
       "featured": true,
       "inStock": true,
-      "createdAt": "2026-09-04"
+      "createdAt": "04/09/2026"
     },
     {
       "id": "daisy-bucket-hat-001",
@@ -239,8 +239,8 @@
       "price": 899,
       "originalPrice": 1199,
       "badge": null,
-      "shortDescription": "A handmade crochet bucket hat covered in cute daisies. Your new favourite sunny-day accessory",
-      "description": "Add a little colour and cottagecore charm to your outfits with our handmade crochet daisy bucket hat. Featuring a playful daisy design and a relaxed bucket-hat silhouette, it’s perfect for sunny days, vacations, picnics, festivals, and everyday looks. Each hat is carefully crocheted by hand, making every piece unique and full of character.",
+      "shortDescription": "A handmade crochet bucket hat covered in cute daisies. Your new favourite sunny-day accessory.",
+      "description": "Add a little colour and cottagecore charm to your outfits with our handmade crochet daisy bucket hat. Featuring a playful daisy design and a relaxed bucket-hat silhouette, it's perfect for sunny days, vacations, picnics, festivals, and everyday looks. Each hat is carefully crocheted by hand, making every piece unique and full of character.",
       "details": {
         "Material": "Premium acrylic yarn",
         "Washable": "Hand wash lay flat to dry",
@@ -264,7 +264,7 @@
       ],
       "featured": true,
       "inStock": true,
-      "createdAt": "2026-09-04"
+      "createdAt": "04/09/2026"
     },
     {
       "id": "daisy-hair-clutcher-001",
@@ -274,7 +274,7 @@
       "originalPrice": 399,
       "badge": null,
       "shortDescription": "A delicate handmade crochet flower hair clutcher with blue/pink blooms, green leaves and pearl accents, a little floral detail for your everyday look.",
-      "description": "Add a soft, feminine touch to your hairstyle with our Crochet Flower Hair Clutcher. Featuring layered blue crochet flowers, tiny green leaves and subtle pearl embellishments, this statement accessory turns even a simple ponytail or bun into a pretty, effortless look. Handmade with care, it’s perfect for everyday styling, festive outfits, brunches, picnics and gifting.",
+      "description": "Add a soft, feminine touch to your hairstyle with our Crochet Flower Hair Clutcher. Featuring layered blue crochet flowers, tiny green leaves and subtle pearl embellishments, this statement accessory turns even a simple ponytail or bun into a pretty, effortless look. Handmade with care, it's perfect for everyday styling, festive outfits, brunches, picnics and gifting.",
       "details": {
         "Material": "Premium cotton yarn",
         "Washable": "Not washable",
@@ -299,7 +299,7 @@
       ],
       "featured": true,
       "inStock": true,
-      "createdAt": "2026-09-04"
+      "createdAt": "04/09/2026"
     },
     {
       "id": "single-flower-clutcher-001",
@@ -332,7 +332,135 @@
       ],
       "featured": true,
       "inStock": true,
-      "createdAt": "2026-09-04"
+      "createdAt": "04/09/2026"
+    },
+    {
+      "id": "batman-bouquet-001",
+      "name": "Batman Bouquet",
+      "category": "bouquets & flowers",
+      "price": 799,
+      "originalPrice": 999,
+      "badge": null,
+      "shortDescription": "A bold and quirky handmade crochet bouquet featuring Batman-inspired details, the perfect gift for every superhero fan.",
+      "description": "Forget ordinary flowers, this Crochet Batman Bouquet is made for the superhero lover in your life! Featuring two adorable crochet Batman faces, a signature Batman-inspired emblem and hand-crocheted green stems, this bouquet is wrapped in sleek black paper with gold detailing and finished with a sheer ribbon.",
+      "details": {
+        "Material": "Premium acrylic yarn, floral stem",
+        "Washable": "Not washable",
+        "Made to order": "5-7 business days"
+      },
+      "colors": [
+        "Black-Yellow"
+      ],
+      "thumbnail": "images/thumbnails/batman-bouquet-001-thumb.jpg",
+      "images": [
+        "images/products/batman-bouquet-001-main.jpg",
+        "images/products/batman-bouquet-001-side.jpg"
+      ],
+      "tags": [
+        "bouquet",
+        "batman",
+        "custom-bouquet",
+        "gift"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "09/09/2026"
+    },
+    {
+      "id": "van-gogh-sunflower-001",
+      "name": "Van Gogh Sunflower",
+      "category": "bouquets & flowers",
+      "price": 599,
+      "originalPrice": 699,
+      "badge": null,
+      "shortDescription": "A handmade crochet sunflower inspired by the iconic blue-and-yellow palette of Van Gogh�s Sunflowers.",
+      "description": "Inspired by the timeless beauty of Van Gogh�s sunflower paintings, this handmade crochet flower puts a playful twist on the classic sunflower. Featuring rich blue petals, a soft blue centre and a bright golden-yellow middle, it�s a unique statement piece for anyone who loves art, flowers and handmade decor.",
+      "details": {
+        "Material": "Premium acrylic yarn, floral stem",
+        "Washable": "Not washable",
+        "Made to order": "5-7 business days"
+      },
+      "colors": [
+        "Blue-Yellow"
+      ],
+      "thumbnail": "images/thumbnails/van-gogh-sunflower-001-thumb.jpg",
+      "images": [
+        "images/products/van-gogh-sunflower-001-main.jpg",
+        "images/products/van-gogh-sunflower-001-side.jpg"
+      ],
+      "tags": [
+        "bouquet",
+        "van-gogh",
+        "custom-bouquet",
+        "gift"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "09/09/2026"
+    },
+    {
+      "id": "rose-desk-pot-001",
+      "name": "Rose Desk Pot",
+      "category": "bouquets & flowers",
+      "price": 499,
+      "originalPrice": 599,
+      "badge": null,
+      "shortDescription": "A cute handmade crochet rose in a mini pot, the perfect everlasting flower to add a cozy, charming touch to your desk or shelf.",
+      "description": "Add a touch of handmade charm to your space with this Crochet Rose Desk Pot. Featuring a beautifully handcrafted red rose with delicate leaves, nestled in a cute crochet pot, this everlasting flower makes the perfect little d�cor piece for your desk, shelf or bedside table.",
+      "details": {
+        "Material": "Premium acrylic yarn, floral stem",
+        "Washable": "Not washable",
+        "Made to order": "5-7 business days"
+      },
+      "colors": [
+        "Red-Beige"
+      ],
+      "thumbnail": "images/thumbnails/rose-desk-pot-001-thumb.jpg",
+      "images": [
+        "images/products/rose-desk-pot-001-main.jpg",
+        "images/products/rose-desk-pot-001-side.jpg"
+      ],
+      "tags": [
+        "gift",
+        "homedecore",
+        "desk-decore",
+        "flower-pot"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "09/09/2026"
+    },
+    {
+      "id": "lavender-blossom-bouquet-001",
+      "name": "Lavender Blossom Bouquet",
+      "category": "bouquets & flowers",
+      "price": 1999,
+      "originalPrice": 2200,
+      "badge": null,
+      "shortDescription": "A dreamy handmade crochet bouquet featuring 2 delicate lilies, 4 pretty tulips and a leafy stem in soft lavender tones. Perfect for gifting and adding a touch of everlasting beauty to any space.",
+      "description": "Bring a little everlasting spring into someone�s life with our Lavender Blossom Crochet Bouquet. Handcrafted with love, this bouquet features 2 crochet lilies, 4 crochet tulips and 1 leafy stem, arranged in beautiful lavender, lilac, white and green tones. Wrapped in soft pastel packaging with a delicate ribbon, it makes a thoughtful alternative to traditional fresh flowers.",
+      "details": {
+        "Material": "Premium acrylic yarn, floral stem",
+        "Washable": "Not washable",
+        "Made to order": "5-7 business days"
+      },
+      "colors": [
+        "White-Lavender-Pink-Green"
+      ],
+      "thumbnail": "images/thumbnails/lavender-blossom-bouquet-001-thumb.jpg",
+      "images": [
+        "images/products/lavender-blossom-bouquet-001-main.jpg",
+        "images/products/lavender-blossom-bouquet-001-side.jpg"
+      ],
+      "tags": [
+        "gift",
+        "bouquet",
+        "tulip-lilies-bouquet",
+        "custom-bouquet"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "09/09/2026"
     }
   ]
 }
