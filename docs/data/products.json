@@ -48,6 +48,7 @@
       "description": "Bring a little spring indoors with this charming handmade crochet flower pot. Featuring delicate pink flowers, green leaves and a cozy neutral crochet pot, this piece is designed to add a soft, whimsical touch to your home or workspace.Unlike fresh flowers, this little arrangement never wilts, making it a beautiful keepsake or thoughtful gift for someone special.",
       "details": {
         "Material": "Premium acrylic yarn, floral stem",
+        "Fill": "Polyester fiberfill",
         "Washable": "Not washable",
         "Made to order": "5-7 business days"
       },
@@ -80,6 +81,7 @@
       "description": "A unique twist on the classic bouquet! This handmade arrangement features a vibrant crochet rose, detailed green leaves and a hand-crocheted bottle replica, beautifully arranged in an aesthetic newspaper-style wrap and finished with a golden ribbon. Unlike a traditional bouquet, every element is handmade and designed to be kept as a long-lasting keepsake. Perfect for birthdays, anniversaries, celebrations or simply surprising someone special.",
       "details": {
         "Material": "Premium acrylic yarn, floral stem",
+        "Fill": "Polyester fiberfill",
         "Washable": "Not washable",
         "Made to order": "6-7 business days"
       },
@@ -235,7 +237,7 @@
     {
       "id": "daisy-bucket-hat-001",
       "name": "Daisy Bucket Hat",
-      "category": "accessories",
+      "category": "wearables",
       "price": 899,
       "originalPrice": 1199,
       "badge": null,
@@ -345,6 +347,7 @@
       "description": "Forget ordinary flowers, this Crochet Batman Bouquet is made for the superhero lover in your life! Featuring two adorable crochet Batman faces, a signature Batman-inspired emblem and hand-crocheted green stems, this bouquet is wrapped in sleek black paper with gold detailing and finished with a sheer ribbon.",
       "details": {
         "Material": "Premium acrylic yarn, floral stem",
+        "Fill": "Polyester fiberfill",
         "Washable": "Not washable",
         "Made to order": "5-7 business days"
       },
@@ -377,6 +380,7 @@
       "description": "Inspired by the timeless beauty of Van Gogh's sunflower paintings, this handmade crochet flower puts a playful twist on the classic sunflower. Featuring rich blue petals, a soft blue centre and a bright golden-yellow middle, it's a unique statement piece for anyone who loves art, flowers and handmade decor.",
       "details": {
         "Material": "Premium acrylic yarn, floral stem",
+        "Fill": "Polyester fiberfill",
         "Washable": "Not washable",
         "Made to order": "5-7 business days"
       },
@@ -409,6 +413,7 @@
       "description": "Add a touch of handmade charm to your space with this Crochet Rose Desk Pot. Featuring a beautifully handcrafted red rose with delicate leaves, nestled in a cute crochet pot, this everlasting flower makes the perfect little decor piece for your desk, shelf or bedside table.",
       "details": {
         "Material": "Premium acrylic yarn, floral stem",
+        "Fill": "Polyester fiberfill",
         "Washable": "Not washable",
         "Made to order": "5-7 business days"
       },
@@ -461,6 +466,101 @@
       "featured": true,
       "inStock": true,
       "createdAt": "09/09/2026"
+    },
+    {
+      "id": "spidey-swing-charm-001",
+      "name": "Spidey Swing Charm",
+      "category": "keychains & bagcharms",
+      "price": 499,
+      "originalPrice": 699,
+      "badge": "Trending",
+      "shortDescription": "A fun crochet Spiderman charm that doubles as a cute car hanging or bag accessory, perfect for adding a little superhero energy wherever you go!",
+      "description": "Handcrafted with love, this Spiderman crochet charm features adorable red and black Spiderman-inspired details with a playful, chunky design. It comes with a long crochet hanging loop, making it perfect to hang from your car's rear-view mirror or attach to your favourite bag, backpack, or purse.",
+      "details": {
+        "Material": "Premium acrylic yarn",
+        "Fill": "Polyester fiberfill",
+        "Washable": "Not washable",
+        "Made to order": "5-7 business days"
+      },
+      "colors": [
+        "Red-Black",
+        "Red-Blue"
+      ],
+      "thumbnail": "images/thumbnails/spidey-swing-charm-001-thumb.jpg",
+      "images": [
+        "images/products/spidey-swing-charm-001-main.jpg",
+        "images/products/spidey-swing-charm-001-side.jpg"
+      ],
+      "tags": [
+        "bag-charm",
+        "gift",
+        "spiderman",
+        "marvel"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "12/09/2026"
+    },
+    {
+      "id": "mikasa-red-scarf-001",
+      "name": "Mikasa Red Scarf",
+      "category": "wearables",
+      "price": 1399,
+      "originalPrice": 1599,
+      "badge": null,
+      "shortDescription": "A cozy, classic crochet scarf inspired by Mikasa's signature red scarf, made for anime lovers and everyday winter styling.",
+      "description": "Wrap yourself in a little piece of Attack on Titan with our handmade Mikasa Crochet Scarf. Featuring a bold red colour, textured crochet pattern, and classic fringe detailing, this scarf is inspired by Mikasa's iconic look while keeping things cozy and wearable. Perfect for anime fans, winter outfits, gifting, or adding a subtle fandom touch to your wardrobe.",
+      "details": {
+        "Material": "Premium acrylic yarn",
+        "Washable": "Hand wash lay flat to dry",
+        "Made to order": "6-7 business days",
+        "Length": "70-75 inches",
+        "Width": "5-7 inches"
+      },
+      "colors": [
+        "Red"
+      ],
+      "thumbnail": "images/thumbnails/mikasa-red-scarf-001-thumb.jpg",
+      "images": [
+        "images/products/mikasa-red-scarf-001-main.jpg",
+        "images/products/mikasa-red-scarf-001-side.jpg"
+      ],
+      "tags": [
+        "gift",
+        "scarf",
+        "winter-wear",
+        "wearable"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "12/09/2026"
+    },
+    {
+      "id": "blush-scarf-001",
+      "name": "Blush Scarf",
+      "category": "wearables",
+      "price": 1699,
+      "originalPrice": 1899,
+      "badge": null,
+      "shortDescription": "A cozy cream crochet scarf adorned with delicate handmade pink roses for a soft, romantic winter look.",
+      "description": "Add a little floral charm to your winter wardrobe with our Bloom & Blush Crochet Scarf. Handcrafted in a warm cream shade, this cozy scarf features delicate pink crochet roses with tiny green leaves scattered across the length, finished with playful fringe detailing.",
+      "details": {
+        "Material": "Premium acrylic yarn",
+        "Washable": "Hand wash lay flat to dry",
+        "Made to order": "6-7 business days",
+        "Length": "70-75 inches",
+        "Width": "5-7 inches"
+      },
+      "colors": [],
+      "thumbnail": "images/thumbnails/blush-scarf-001-thumb.jpg",
+      "images": [
+        "images/products/blush-scarf-001-main.jpg",
+        "images/products/blush-scarf-001-side.jpg"
+      ],
+      "tags": [],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "12/09/2026"
     }
   ]
 }
