@@ -104,36 +104,38 @@
       "createdAt": "04/09/2026"
     },
     {
-      "id": "sun-glow-claw-clip-001",
-      "name": "Sun Glow Claw Clip",
-      "category": "hair accessories",
+      "id": "spidey-swing-charm-001",
+      "name": "Spidey Swing Charm",
+      "category": "keychains & bagcharms",
       "price": 499,
-      "originalPrice": 599,
-      "badge": null,
-      "shortDescription": "A statement crochet sunflower hair claw made to turn a simple hairstyle into a whole vibe.",
-      "description": "Add a little sunshine to your everyday hairstyle with this handmade crochet sunflower hair claw. Featuring layered sunflower blooms, green leaves and delicate pearl accents, this piece combines a playful floral look with an elegant touch.Perfect for ponytails, buns or half-up hairstyles, it’s a beautiful accessory for everyday outfits, festive looks, picnics, vacations and special occasions.",
+      "originalPrice": 699,
+      "badge": "Trending",
+      "shortDescription": "A fun crochet Spiderman charm that doubles as a cute car hanging or bag accessory, perfect for adding a little superhero energy wherever you go!",
+      "description": "Handcrafted with love, this Spiderman crochet charm features adorable red and black Spiderman-inspired details with a playful, chunky design. It comes with a long crochet hanging loop, making it perfect to hang from your car's rear-view mirror or attach to your favourite bag, backpack, or purse.",
       "details": {
-        "Material": "Premium cotton yarn",
+        "Material": "Premium acrylic yarn",
+        "Fill": "Polyester fiberfill",
         "Washable": "Not washable",
         "Made to order": "5-7 business days"
       },
       "colors": [
-        "Yellow"
+        "Red-Black",
+        "Red-Blue"
       ],
-      "thumbnail": "images/thumbnails/sun-glow-claw-clip-001-thumb.jpg",
+      "thumbnail": "images/thumbnails/spidey-swing-charm-001-thumb.jpg",
       "images": [
-        "images/products/sun-glow-claw-clip-001-main.jpg",
-        "images/products/sun-glow-claw-clip-001-side.jpg"
+        "images/products/spidey-swing-charm-001-main.jpg",
+        "images/products/spidey-swing-charm-001-side.jpg"
       ],
       "tags": [
-        "hair-clutcher",
-        "hair-clip",
-        "hair-accessory",
-        "gift"
+        "bag-charm",
+        "gift",
+        "spiderman",
+        "marvel"
       ],
       "featured": true,
       "inStock": true,
-      "createdAt": "04/09/2026"
+      "createdAt": "12/09/2026"
     },
     {
       "id": "tulip-hair-clutcher-001",
@@ -468,38 +470,36 @@
       "createdAt": "09/09/2026"
     },
     {
-      "id": "spidey-swing-charm-001",
-      "name": "Spidey Swing Charm",
-      "category": "keychains & bagcharms",
+      "id": "sun-glow-claw-clip-001",
+      "name": "Sun Glow Claw Clip",
+      "category": "hair accessories",
       "price": 499,
-      "originalPrice": 699,
-      "badge": "Trending",
-      "shortDescription": "A fun crochet Spiderman charm that doubles as a cute car hanging or bag accessory, perfect for adding a little superhero energy wherever you go!",
-      "description": "Handcrafted with love, this Spiderman crochet charm features adorable red and black Spiderman-inspired details with a playful, chunky design. It comes with a long crochet hanging loop, making it perfect to hang from your car's rear-view mirror or attach to your favourite bag, backpack, or purse.",
+      "originalPrice": 599,
+      "badge": null,
+      "shortDescription": "A statement crochet sunflower hair claw made to turn a simple hairstyle into a whole vibe.",
+      "description": "Add a little sunshine to your everyday hairstyle with this handmade crochet sunflower hair claw. Featuring layered sunflower blooms, green leaves and delicate pearl accents, this piece combines a playful floral look with an elegant touch.Perfect for ponytails, buns or half-up hairstyles, it’s a beautiful accessory for everyday outfits, festive looks, picnics, vacations and special occasions.",
       "details": {
-        "Material": "Premium acrylic yarn",
-        "Fill": "Polyester fiberfill",
+        "Material": "Premium cotton yarn",
         "Washable": "Not washable",
         "Made to order": "5-7 business days"
       },
       "colors": [
-        "Red-Black",
-        "Red-Blue"
+        "Yellow"
       ],
-      "thumbnail": "images/thumbnails/spidey-swing-charm-001-thumb.jpg",
+      "thumbnail": "images/thumbnails/sun-glow-claw-clip-001-thumb.jpg",
       "images": [
-        "images/products/spidey-swing-charm-001-main.jpg",
-        "images/products/spidey-swing-charm-001-side.jpg"
+        "images/products/sun-glow-claw-clip-001-main.jpg",
+        "images/products/sun-glow-claw-clip-001-side.jpg"
       ],
       "tags": [
-        "bag-charm",
-        "gift",
-        "spiderman",
-        "marvel"
+        "hair-clutcher",
+        "hair-clip",
+        "hair-accessory",
+        "gift"
       ],
       "featured": true,
       "inStock": true,
-      "createdAt": "12/09/2026"
+      "createdAt": "04/09/2026"
     },
     {
       "id": "mikasa-red-scarf-001",
@@ -551,13 +551,20 @@
         "Length": "70-75 inches",
         "Width": "5-7 inches"
       },
-      "colors": [],
+      "colors": [
+        "White-Pink"
+      ],
       "thumbnail": "images/thumbnails/blush-scarf-001-thumb.jpg",
       "images": [
         "images/products/blush-scarf-001-main.jpg",
         "images/products/blush-scarf-001-side.jpg"
       ],
-      "tags": [],
+      "tags": [
+        "gift",
+        "scarf",
+        "winter-wear",
+        "wearable"
+      ],
       "featured": false,
       "inStock": true,
       "createdAt": "12/09/2026"
