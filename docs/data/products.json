@@ -99,7 +99,7 @@
         "beer-bottle-bouquet",
         "custom-bouquet"
       ],
-      "featured": true,
+      "featured": false,
       "inStock": true,
       "createdAt": "04/09/2026"
     },
@@ -163,7 +163,7 @@
         "hair-clutcher",
         "hair-clip"
       ],
-      "featured": true,
+      "featured": false,
       "inStock": true,
       "createdAt": "04/09/2026"
     },
@@ -195,7 +195,7 @@
         "hair-clutcher",
         "hair-clip"
       ],
-      "featured": true,
+      "featured": false,
       "inStock": true,
       "createdAt": "04/09/2026"
     },
@@ -230,7 +230,7 @@
         "hair-clutcher",
         "hair-clip"
       ],
-      "featured": true,
+      "featured": false,
       "inStock": true,
       "createdAt": "04/09/2026"
     },
@@ -264,7 +264,7 @@
         "crochet-hat",
         "daisy-bucket-hat"
       ],
-      "featured": true,
+      "featured": false,
       "inStock": true,
       "createdAt": "04/09/2026"
     },
@@ -299,7 +299,7 @@
         "hair-clutcher",
         "hair-clip"
       ],
-      "featured": true,
+      "featured": false,
       "inStock": true,
       "createdAt": "04/09/2026"
     },
@@ -332,7 +332,7 @@
         "hair-clutcher",
         "hair-clip"
       ],
-      "featured": true,
+      "featured": false,
       "inStock": true,
       "createdAt": "04/09/2026"
     },
@@ -365,7 +365,7 @@
         "custom-bouquet",
         "gift"
       ],
-      "featured": true,
+      "featured": false,
       "inStock": true,
       "createdAt": "09/09/2026"
     },
@@ -376,7 +376,7 @@
       "price": 599,
       "originalPrice": 699,
       "badge": null,
-      "shortDescription": "A handmade crochet sunflower inspired by the iconic blue-and-yellow palette of Van Gogh�s Sunflowers.",
+      "shortDescription": "A handmade crochet sunflower inspired by the iconic blue-and-yellow palette of Van Gogh's Sunflowers.",
       "description": "Inspired by the timeless beauty of Van Gogh's sunflower paintings, this handmade crochet flower puts a playful twist on the classic sunflower. Featuring rich blue petals, a soft blue centre and a bright golden-yellow middle, it's a unique statement piece for anyone who loves art, flowers and handmade decor.",
       "details": {
         "Material": "Premium acrylic yarn, floral stem",
@@ -398,7 +398,7 @@
         "custom-bouquet",
         "gift"
       ],
-      "featured": true,
+      "featured": false,
       "inStock": true,
       "createdAt": "09/09/2026"
     },
@@ -431,7 +431,7 @@
         "desk-decore",
         "flower-pot"
       ],
-      "featured": true,
+      "featured": false,
       "inStock": true,
       "createdAt": "09/09/2026"
     },
@@ -463,7 +463,7 @@
         "tulip-lilies-bouquet",
         "custom-bouquet"
       ],
-      "featured": true,
+      "featured": false,
       "inStock": true,
       "createdAt": "09/09/2026"
     },
@@ -531,7 +531,7 @@
         "winter-wear",
         "wearable"
       ],
-      "featured": true,
+      "featured": false,
       "inStock": true,
       "createdAt": "12/09/2026"
     },
@@ -558,7 +558,7 @@
         "images/products/blush-scarf-001-side.jpg"
       ],
       "tags": [],
-      "featured": true,
+      "featured": false,
       "inStock": true,
       "createdAt": "12/09/2026"
     }
