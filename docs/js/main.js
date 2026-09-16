@@ -338,3 +338,6 @@ function openProduct(id) {
 // -- Utils ------------------------------------------------------------------
 function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 function slug(s) { return s.toLowerCase().replace(/\s+/g, '-'); }
+document.fonts.load('42px Parisienne').then(() => {
+  document.documentElement.classList.add('parisienne-loaded');
+});
