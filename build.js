@@ -63,140 +63,6 @@ const getText = url => get(url).then(b => b.toString('utf8'));
 function mkdirp(dir) { fs.mkdirSync(dir, { recursive: true }); }
 
 // -------------------------------------------------------------------------
-// STEP 1  -  SVG Image Generation
-// -------------------------------------------------------------------------
-
-function buildImages(products) {
-  head('[ Step 1 ] Generating SVG placeholder images');
-
-  mkdirp(path.join(DOCS, 'images', 'thumbnails'));
-  mkdirp(path.join(DOCS, 'images', 'products'));
-
-  // Derive icon + colors from config theme or fall back to teal defaults
-  const TEAL   = '#1B7878';
-  const TEAL_D = '#145F5F';
-  const TEAL_L = '#A8D5D5';
-  const GOLD   = '#E8C97A';
-
-  // Icon map by category
-  const ICONS = {
-    amigurumi:   '🐻', blankets: '🌸', accessories: '🎩',
-    bags:        '🌻', home:     '☕', baby:         '👶',
-    default:     '🧶'
-  };
-
-  // Color map by category
-  const COLORS = {
-    amigurumi:   { bg: [TEAL_L, '#C8E8E8'], accent: TEAL   },
-    blankets:    { bg: ['#D0E8E8', '#B8DEDE'], accent: TEAL_D },
-    accessories: { bg: ['#E8F4F4', '#D8ECEC'], accent: TEAL  },
-    bags:        { bg: ['#FFF8E0', '#F5EEC0'], accent: GOLD  },
-    home:        { bg: ['#E0F0F0', '#CCE4E4'], accent: TEAL_D },
-    baby:        { bg: ['#E4F5F5', '#CCE8E8'], accent: TEAL_D },
-    default:     { bg: [TEAL_L,   '#C8E8E8'], accent: TEAL   },
-  };
-
-  const viewLabels = {
-    main: 'Main View', side: 'Side View', detail: 'Detail', group: 'Collection',
-    fold: 'Folded', use: 'In Use', stack: 'Stacked', open: 'Open',
-    single: 'Single', style: 'Styled', texture: 'Texture Close-up',
-    worn: 'Worn', flat: 'Flat Lay', pair: 'Pair', gift: 'Gift Wrapped',
-  };
-
-  function makeCrochetDots(color, opacity = 0.08) {
-    let d = '';
-    for (let x = 20; x < 400; x += 30)
-      for (let y = 20; y < 400; y += 30)
-        d += `<circle cx="${x}" cy="${y}" r="3" fill="${color}" opacity="${opacity}"/>`;
-    return d;
-  }
-
-  function makeWave(color, y, opacity = 0.15) {
-    return `<path d="M0 ${y} Q50 ${y-20} 100 ${y} Q150 ${y+20} 200 ${y} Q250 ${y-20} 300 ${y} Q350 ${y+20} 400 ${y}" stroke="${color}" stroke-width="2" fill="none" opacity="${opacity}"/>`;
-  }
-
-  function thumbnail(label, icon, bg, accent) {
-    const [c1, c2] = bg;
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:${c1}"/>
-      <stop offset="100%" style="stop-color:${c2}"/>
-    </linearGradient>
-  </defs>
-  <rect width="400" height="400" fill="url(#bg)"/>
-  ${makeCrochetDots(accent)}
-  ${makeWave(accent, 300)}${makeWave(accent, 340)}
-  <circle cx="200" cy="185" r="100" fill="${accent}" opacity="0.12"/>
-  <circle cx="200" cy="185" r="80"  fill="${accent}" opacity="0.1"/>
-  <text x="200" y="210" font-family="sans-serif" font-size="80" text-anchor="middle">${icon}</text>
-  <rect x="0" y="320" width="400" height="80" fill="${accent}" opacity="0.85"/>
-  <text x="200" y="365" font-family="Georgia,serif" font-size="20" font-weight="700"
-        fill="white" text-anchor="middle">${label}</text>
-</svg>`;
-  }
-
-  function productView(label, icon, bg, accent, view) {
-    const [c1, c2] = bg;
-    const vl = viewLabels[view] || view;
-    const id = view + Math.random().toString(36).slice(2,6);
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
-  <defs>
-    <linearGradient id="bg${id}" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:${c1}"/>
-      <stop offset="100%" style="stop-color:${c2}"/>
-    </linearGradient>
-    <radialGradient id="sp${id}" cx="50%" cy="45%" r="55%">
-      <stop offset="0%" style="stop-color:white;stop-opacity:0.35"/>
-      <stop offset="100%" style="stop-color:transparent"/>
-    </radialGradient>
-  </defs>
-  <rect width="800" height="800" fill="url(#bg${id})"/>
-  <rect width="800" height="800" fill="url(#sp${id})"/>
-  <circle cx="400" cy="370" r="210" fill="${accent}" opacity="0.1"/>
-  <circle cx="400" cy="370" r="130" fill="white"     opacity="0.35"/>
-  <text x="400" y="415" font-family="sans-serif" font-size="130" text-anchor="middle">${icon}</text>
-  <rect x="270" y="580" width="260" height="44" rx="22" fill="${accent}" opacity="0.9"/>
-  <text x="400" y="608" font-family="sans-serif" font-size="18" font-weight="600"
-        fill="white" text-anchor="middle">${vl}</text>
-  <text x="400" y="680" font-family="Georgia,serif" font-size="26" font-weight="700"
-        fill="${accent}" text-anchor="middle" opacity="0.85">${label}</text>
-</svg>`;
-  }
-
-  let count = 0;
-
-  for (const p of products) {
-    const cat    = p.category || 'default';
-    const clr    = COLORS[cat] || COLORS.default;
-    const icon   = ICONS[cat]  || ICONS.default;
-    const { bg, accent } = clr;
-
-    // Extract view names from image paths in config
-    const views = (p.images || []).map(imgPath => {
-      const name = path.basename(imgPath, '.svg');
-      return name.replace(p.id + '-', '');
-    });
-
-    // Thumbnail
-    const thumbFile = path.join(DOCS, p.thumbnail);
-    mkdirp(path.dirname(thumbFile));
-    fs.writeFileSync(thumbFile, thumbnail(p.name, icon, bg, accent));
-    count++;
-
-    // Detail views
-    for (const view of views) {
-      const imgFile = path.join(DOCS, `images/products/${p.id}-${view}.svg`);
-      mkdirp(path.dirname(imgFile));
-      fs.writeFileSync(imgFile, productView(p.name, icon, bg, accent, view));
-      count++;
-    }
-  }
-
-  ok(`Generated ${count} SVG files`);
-}
-
-// -------------------------------------------------------------------------
 // STEP 2  -  Font Download
 // -------------------------------------------------------------------------
 
@@ -212,7 +78,7 @@ async function buildFonts(theme) {
   const families = [
     `${fonts.serif}:ital,wght@0,400;0,600;0,700;1,400`,
     `${fonts.sans}:wght@300;400;500;600`,
-    `${fonts.script}:wght@600;700`,
+    `${fonts.script}:wght@400`,
   ].map(f => 'family=' + encodeURIComponent(f)).join('&');
 
   const GFONTS_URL = `https://fonts.googleapis.com/css2?${families}&display=swap`;
@@ -313,7 +179,6 @@ async function buildFonts(theme) {
     : {};
   const theme = siteRaw.theme;
 
-  if (FULL || IMAGES_ONLY) buildImages(products);
   if (FULL || FONTS_ONLY)  await buildFonts(theme);
 
   console.log('\n--------------------------------------------');

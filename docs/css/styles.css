@@ -1166,10 +1166,3 @@ ul { list-style: none; }
   .pdp__cta { flex-direction: column; }
   .pdp__cta .btn { width: 100%; justify-content: center; }
 }
-.hero__brand-name {
-  visibility: hidden;
-}
-
-.parisienne-loaded .hero__brand-name {
-  visibility: visible;
-}
