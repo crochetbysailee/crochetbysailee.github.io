@@ -249,6 +249,44 @@ function buildGrid(products) {
   allProducts = products;
   renderGrid(products);
   setupSort();
+  setupSearch();
+}
+
+// -- Shared filter helper (category + search + sort) -----
+function getActiveCategory() {
+  return document.querySelector('.filter-btn.active')?.dataset.category || 'all';
+}
+function getSearchQuery() {
+  return (document.getElementById('searchInput')?.value || '').trim().toLowerCase();
+}
+function getActiveSort() {
+  return document.getElementById('sortSelect')?.value || '';
+}
+
+function applyFilters() {
+  const cat   = getActiveCategory();
+  const query = getSearchQuery();
+  const sort  = getActiveSort();
+
+  let list = [...allProducts];
+
+  if (cat !== 'all')  list = list.filter(p => p.category === cat);
+
+  if (query) {
+    list = list.filter(p =>
+      p.name.toLowerCase().includes(query) ||
+      (p.shortDescription || '').toLowerCase().includes(query) ||
+      (p.description || '').toLowerCase().includes(query) ||
+      (p.category || '').toLowerCase().includes(query) ||
+      (p.tags || []).some(t => t.toLowerCase().includes(query))
+    );
+  }
+
+  if (sort === 'price-asc')  list.sort((a, b) => a.price - b.price);
+  if (sort === 'price-desc') list.sort((a, b) => b.price - a.price);
+  if (sort === 'newest')     list.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+  renderGrid(list);
 }
 
 function renderGrid(products) {
@@ -310,23 +348,31 @@ function buildFilters(products) {
     if (!btn) return;
     wrap.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const cat = btn.dataset.category;
-    renderGrid(cat === 'all' ? allProducts : allProducts.filter(p => p.category === cat));
-    // reset sort
-    document.getElementById('sortSelect').value = '';
+    applyFilters();   // respects active search query + sort too
   });
 }
 
 // -- Sort -------------------------------------------------------------------
 function setupSort() {
-  document.getElementById('sortSelect').addEventListener('change', e => {
-    const val    = e.target.value;
-    const active = document.querySelector('.filter-btn.active')?.dataset.category || 'all';
-    let list = active === 'all' ? [...allProducts] : allProducts.filter(p => p.category === active);
-    if (val === 'price-asc')  list.sort((a, b) => a.price - b.price);
-    if (val === 'price-desc') list.sort((a, b) => b.price - a.price);
-    if (val === 'newest')     list.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-    renderGrid(list);
+  document.getElementById('sortSelect')?.addEventListener('change', applyFilters);
+}
+
+// -- Search -----------------------------------------------------
+function setupSearch() {
+  const input = document.getElementById('searchInput');
+  const clear = document.getElementById('searchClear');
+  if (!input) return;
+
+  input.addEventListener('input', () => {
+    clear.hidden = !input.value;
+    applyFilters();
+  });
+
+  clear.addEventListener('click', () => {
+    input.value = '';
+    clear.hidden = true;
+    input.focus();
+    applyFilters();
   });
 }
 
@@ -338,8 +384,3 @@ function openProduct(id) {
 // -- Utils ------------------------------------------------------------------
 function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 function slug(s) { return s.toLowerCase().replace(/\s+/g, '-'); }
-document.fonts.load('42px Parisienne').then(() => {
-  document.documentElement.classList.add('parisienne-loaded');
-  document.querySelector('.hero__brand-name')?.style.removeProperty('visibility');
-});
-

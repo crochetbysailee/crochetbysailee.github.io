@@ -1,3 +1,4 @@
+<!-- Designed & built by Amnivex — https://github.com/Amnivex -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,6 +93,20 @@
       </div>
       <div class="filters" id="filters">
         <button class="filter-btn active" data-category="all">All</button>
+      </div>
+      <!-- Search -->
+      <div class="search-wrap">
+        <div class="search-input-wrap">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="7" cy="7" r="4.5"/><line x1="10.5" y1="10.5" x2="14" y2="14"/>
+          </svg>
+          <input class="search-input" id="searchInput" type="search" placeholder="Search products..." autocomplete="off" />
+          <button class="search-clear" id="searchClear" hidden>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="2" y1="2" x2="12" y2="12"/><line x1="12" y1="2" x2="2" y2="12"/>
+            </svg>
+          </button>
+        </div>
       </div>
       <div class="catalog-toolbar">
         <span class="catalog-count" id="catalogCount">Loading...</span>
@@ -196,6 +211,7 @@
       </div>
       <p class="footer__tagline" id="footerTagline">Made with 100% love, one stitch at a time.</p>
       <p class="footer__copy">© <span id="year"></span> crochetbysailee. All rights reserved.</p>
+      <p class="footer__credit">Designed &amp; built by <a href="https://github.com/Amnivex" target="_blank">Amnivex</a></p>
     </div>
   </footer>
 
