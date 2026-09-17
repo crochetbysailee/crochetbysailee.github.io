@@ -9,7 +9,8 @@
     "build":  "node build.js",
     "images": "node build.js --images-only",
     "fonts":  "node build.js --fonts-only",
-    "data":   "node data-to-json.js"
+    "data":   "node data-to-json.js",
+    "reviews": "node reviews-to-json.js"
   },
   "dependencies": {
     "express": "^4.18.2",

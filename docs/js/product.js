@@ -83,6 +83,19 @@ function renderProduct(p, contact = {}) {
     switchImage(thumb.dataset.src, thumb);
   });
 
+  // Swipe on main gallery image
+  const mainWrap = document.querySelector('.gallery__main-wrap');
+  let galleryTouchX = 0;
+  mainWrap?.addEventListener('touchstart', e => { galleryTouchX = e.touches[0].clientX; }, { passive: true });
+  mainWrap?.addEventListener('touchend', e => {
+    const diff = galleryTouchX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) < 40) return;
+    const thumbs = [...document.querySelectorAll('.gallery__thumb')];
+    const cur    = thumbs.findIndex(t => t.classList.contains('active'));
+    const next   = diff > 0 ? cur + 1 : cur - 1;
+    if (thumbs[next]) switchImage(thumbs[next].dataset.src, thumbs[next]);
+  }, { passive: true });
+
   // Zoom gallery modal
   const zoomBtn     = document.getElementById('galleryZoomBtn');
   const zoomModal   = document.getElementById('zoomModal');
@@ -129,6 +142,16 @@ function renderProduct(p, contact = {}) {
     if (e.key === 'ArrowLeft'  && zoomIdx > 0)              openZoom(zoomIdx - 1);
     if (e.key === 'ArrowRight' && zoomIdx < images.length - 1) openZoom(zoomIdx + 1);
   });
+
+  // Swipe in zoom modal
+  let zoomTouchX = 0;
+  zoomModal.addEventListener('touchstart', e => { zoomTouchX = e.touches[0].clientX; }, { passive: true });
+  zoomModal.addEventListener('touchend', e => {
+    const diff = zoomTouchX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) < 40) return;
+    if (diff > 0 && zoomIdx < images.length - 1) openZoom(zoomIdx + 1);
+    if (diff < 0 && zoomIdx > 0)                 openZoom(zoomIdx - 1);
+  }, { passive: true });
 
   // Info
   document.getElementById('pdpCategory').textContent = capitalize(p.category);
@@ -247,6 +270,7 @@ function loadRelated(current, allProducts) {
 
 // -- Theme ------------------------------------------------------------------
 function applyTheme(theme) {
+  if (!theme) return;
   const root = document.documentElement;
   const { colors, fonts, nav } = theme;
   if (colors) {
