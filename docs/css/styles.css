@@ -205,12 +205,14 @@ ul { list-style: none; }
 
 /* -- HERO --------------------------------------------------------------- */
 .hero {
-  min-height: 100svh;
+  height: 100svh;
+  min-height: 560px;   /* floor so content never gets crushed on tiny screens */
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
   padding-top: var(--nav-h);
+  padding-bottom: 72px; /* reserve space for marquee strip at bottom */
   background: linear-gradient(145deg, #E8F4F4 0%, #D0E8E8 40%, #B8DEDE 100%);
 }
 .hero__bg-pattern {
@@ -283,6 +285,7 @@ ul { list-style: none; }
   position: relative;
   z-index: 2;
   max-width: 680px;
+  padding-top: 1.5rem;  /* extra gap so eyebrow never clips into nav */
 }
 .hero__eyebrow {
   display: inline-flex;
@@ -301,11 +304,11 @@ ul { list-style: none; }
 }
 .hero__headline {
   font-family: var(--ff-serif);
-  font-size: clamp(2.6rem, 7vw, 5rem);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.15;
   color: var(--clr-primary-d);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 .hero__headline em {
   color: var(--clr-primary);
@@ -393,6 +396,14 @@ ul { list-style: none; }
   font-size: .8rem;
   font-weight: 600;
   letter-spacing: .1em;
+}
+/* Pinned to bottom of hero */
+.hero__marquee {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 .marquee-track {
   display: flex;
