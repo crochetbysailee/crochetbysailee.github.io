@@ -1,11 +1,14 @@
+<!-- Designed & built by Amnivex — https://github.com/Amnivex -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>crochetbysailee  -  Handcrafted Crochet</title>
-  <link rel="preload" href="fonts/Parisienne-Regular.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -52,7 +55,7 @@
     </div>
     <div class="hero__content container">
       <p class="hero__eyebrow reveal">Handmade with heart</p>
-      <span class="hero__brand-name reveal" style="visibility:hidden;">crochetbysailee</span>
+      <span class="hero__brand-name reveal">crochetbysailee</span>
       <h1 class="hero__headline reveal" id="heroHeadline">Every stitch tells a story</h1>
       <p class="hero__sub reveal" id="heroSub">Handmade crochet pieces crafted with love, warmth, and care  -  made to order, just for you</p>
       <a href="#catalog" class="btn btn--primary reveal" id="heroCta">Explore Collection</a>
@@ -60,17 +63,17 @@
     <div class="hero__scroll-hint" aria-hidden="true">
       <span class="scroll-dot"></span>
     </div>
-  </header>
 
-  <!-- -- MARQUEE STRIP --------------------------------------------------- -->
-  <div class="marquee-strip" aria-hidden="true">
-    <div class="marquee-track">
-      <span>* Handmade</span><span>* Made to Order</span><span>* Premium Yarn</span>
-      <span>* Gift Ready</span><span>* Customisable</span><span>* Ships India-wide</span>
-      <span>* Handmade</span><span>* Made to Order</span><span>* Premium Yarn</span>
-      <span>* Gift Ready</span><span>* Customisable</span><span>* Ships India-wide</span>
+    <!-- -- MARQUEE STRIP --------------------------------------------------- -->
+    <div class="marquee-strip hero__marquee" aria-hidden="true">
+      <div class="marquee-track" id="marquee-track">
+        <span>* Handmade</span><span>* Made to Order</span><span>* Premium Yarn</span>
+        <span>* Gift Ready</span><span>* Customisable</span><span>* Ships India-wide</span>
+        <span>* Handmade</span><span>* Made to Order</span><span>* Premium Yarn</span>
+        <span>* Gift Ready</span><span>* Customisable</span><span>* Ships India-wide</span>
+      </div>
     </div>
-  </div>
+  </header>
 
   <!-- -- FEATURED -------------------------------------------------------- -->
   <section class="section" id="featured">
@@ -93,6 +96,21 @@
       <div class="filters" id="filters">
         <button class="filter-btn active" data-category="all">All</button>
       </div>
+      <!-- Search -->
+      <div class="search-wrap">
+        <div class="search-input-wrap">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="7" cy="7" r="4.5"/><line x1="10.5" y1="10.5" x2="14" y2="14"/>
+          </svg>
+          <input class="search-input" id="searchInput" type="search" placeholder="Search products..." autocomplete="off" />
+          <button class="search-clear" id="searchClear" hidden>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="2" y1="2" x2="12" y2="12"/><line x1="12" y1="2" x2="2" y2="12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
       <div class="catalog-toolbar">
         <span class="catalog-count" id="catalogCount">Loading...</span>
         <select class="sort-select" id="sortSelect">
@@ -148,6 +166,40 @@
     </div>
   </section>
 
+  <!-- -- REVIEWS -------------------------------------------------------- -->
+  <section class="section reviews-section" id="reviewsSection">
+    <div class="container">
+      <div class="reviews-header">
+        <div>
+          <p class="section__eyebrow">What customers say</p>
+          <h2 class="section__title">Customer Reviews</h2>
+        </div>
+        <div class="reviews-summary" id="reviewsSummary" hidden>
+          <span class="reviews-avg" id="reviewsAvg"></span>
+          <div class="reviews-stars" id="reviewsStars"></div>
+          <span class="reviews-count" id="reviewsCount"></span>
+        </div>
+      </div>
+      <!-- Carousel -->
+      <div class="reviews-carousel" id="reviewsCarousel">
+        <button class="carousel-btn carousel-btn--prev" id="reviewsPrev">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="13,4 7,10 13,16"/>
+          </svg>
+        </button>
+        <div class="carousel-track-wrap">
+          <div class="carousel-track" id="reviewsTrack"></div>
+        </div>
+        <button class="carousel-btn carousel-btn--next" id="reviewsNext">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="7,4 13,10 7,16"/>
+          </svg>
+        </button>
+      </div>
+      <div class="carousel-dots" id="reviewsDots"></div>
+    </div>
+  </section>
+
   <!-- -- CONTACT --------------------------------------------------------- -->
   <section class="section section--tinted contact" id="contact">
     <div class="container">
@@ -196,11 +248,10 @@
       </div>
       <p class="footer__tagline" id="footerTagline">Made with 100% love, one stitch at a time.</p>
       <p class="footer__copy">© <span id="year"></span> crochetbysailee. All rights reserved.</p>
+      <p class="footer__credit">Designed &amp; built by <a href="https://github.com/Amnivex" target="_blank"></a>Amnivex</a></p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
 </body>
 </html>
-
-

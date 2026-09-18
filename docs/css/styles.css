@@ -51,8 +51,8 @@ body {
   font-family: var(--ff-sans);
   background: var(--clr-bg);
   color: var(--clr-text);
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.7;
   overflow-x: hidden;
 }
 img { display: block; max-width: 100%; }
@@ -80,7 +80,7 @@ ul { list-style: none; }
 .section__header { text-align: center; margin-bottom: var(--space-lg); }
 .section__title {
   font-family: var(--ff-serif);
-  font-size: 42px;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 700;
   color: var(--clr-text);
   line-height: 1.2;
@@ -205,12 +205,14 @@ ul { list-style: none; }
 
 /* -- HERO --------------------------------------------------------------- */
 .hero {
-  min-height: 100svh;
+  height: 100svh;
+  min-height: 560px;   /* floor so content never gets crushed on tiny screens */
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
   padding-top: var(--nav-h);
+  padding-bottom: 72px; /* reserve space for marquee strip at bottom */
   background: linear-gradient(145deg, #E8F4F4 0%, #D0E8E8 40%, #B8DEDE 100%);
 }
 .hero__bg-pattern {
@@ -283,6 +285,7 @@ ul { list-style: none; }
   position: relative;
   z-index: 2;
   max-width: 680px;
+  padding-top: 1.5rem;  /* extra gap so eyebrow never clips into nav */
 }
 .hero__eyebrow {
   display: inline-flex;
@@ -301,11 +304,11 @@ ul { list-style: none; }
 }
 .hero__headline {
   font-family: var(--ff-serif);
-  font-size: 68px;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
   font-weight: 700;
-  line-height: 0.95;
+  line-height: 1.15;
   color: var(--clr-primary-d);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 .hero__headline em {
   color: var(--clr-primary);
@@ -319,7 +322,7 @@ ul { list-style: none; }
 }
 .hero__brand-name {
   font-family: var(--ff-script);
-  font-size: 42px;
+  font-size: 4.0rem;
   color: var(--clr-primary);
   display: block;
   margin-bottom: 1.5rem;
@@ -393,6 +396,14 @@ ul { list-style: none; }
   font-size: .8rem;
   font-weight: 600;
   letter-spacing: .1em;
+}
+/* Pinned to bottom of hero */
+.hero__marquee {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 .marquee-track {
   display: flex;
@@ -539,6 +550,49 @@ ul { list-style: none; }
   border-color: var(--clr-primary);
   color: var(--clr-white);
 }
+/* Search */
+.search-wrap { margin-bottom: 1rem; }
+.search-input-wrap {
+  position: relative;
+  max-width: 420px;
+}
+.search-icon {
+  position: absolute;
+  left: .85rem; top: 50%;
+  transform: translateY(-50%);
+  color: var(--clr-text-2);
+  pointer-events: none;
+}
+.search-input {
+  width: 100%;
+  padding: .65rem 2.5rem .65rem 2.5rem;
+  border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius-full);
+  background: var(--clr-white);
+  font-size: .9rem;
+  font-family: var(--ff-sans);
+  color: var(--clr-text);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.search-input:focus {
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 3px rgba(27,120,120,.1);
+}
+.search-input::placeholder { color: var(--clr-text-2); opacity: .6; }
+/* hide native clear button (WebKit) */
+.search-input::-webkit-search-cancel-button { display: none; }
+.search-clear {
+  position: absolute;
+  right: .75rem; top: 50%;
+  transform: translateY(-50%);
+  color: var(--clr-text-2);
+  padding: .25rem;
+  border-radius: 50%;
+  transition: color var(--transition);
+}
+.search-clear:hover { color: var(--clr-primary); }
+
 .catalog-toolbar {
   display: flex;
   align-items: center;
@@ -683,7 +737,7 @@ ul { list-style: none; }
 .founder-card__bio {
   font-size: .9rem;
   color: var(--clr-text-2);
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 1.25rem;
 }
 .founder-card__bio p { margin-bottom: .35rem; }
@@ -704,6 +758,115 @@ ul { list-style: none; }
 .founder-card__ig:hover {
   background: var(--clr-primary);
   color: var(--clr-white);
+}
+
+/* -- REVIEWS CAROUSEL --------------------------------------------------- */
+.reviews-section { background: var(--clr-bg-tint); }
+.reviews-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: var(--space-md);
+}
+.reviews-summary { display: flex; flex-direction: column; align-items: flex-end; gap: .3rem; }
+.reviews-avg { font-family: var(--ff-serif); font-size: 2.8rem; font-weight: 700; color: var(--clr-text); line-height: 1; }
+.reviews-stars { display: flex; gap: 3px; }
+.star { font-size: 1.1rem; color: var(--clr-border); }
+.star.filled { color: #E8A838; }
+.reviews-count { font-size: .85rem; color: var(--clr-text-2); }
+
+/* Carousel wrapper */
+.reviews-carousel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.carousel-track-wrap {
+  flex: 1;
+  overflow: hidden;
+}
+.carousel-track {
+  display: flex;
+  gap: 1.25rem;
+  transition: transform .4s ease;
+  will-change: transform;
+}
+
+/* Each card is fixed width inside track */
+.review-card {
+  flex: 0 0 calc(33.333% - 1rem);
+  min-width: 260px;
+  background: var(--clr-white);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.review-card__top { display: flex; align-items: center; margin-bottom: .75rem; }
+.review-card__stars { display: flex; gap: 2px; }
+.review-card__stars .star { font-size: .95rem; }
+.review-card__title {
+  font-family: var(--ff-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--clr-text);
+  margin-bottom: .4rem;
+}
+.review-card__text {
+  font-size: .88rem;
+  color: var(--clr-text-2);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.review-card__footer { display: flex; align-items: center; justify-content: space-between; }
+.review-card__reviewer { font-size: .82rem; font-weight: 600; color: var(--clr-text); }
+.review-card__date { font-size: .78rem; color: var(--clr-text-2); }
+
+/* Nav buttons */
+.carousel-btn {
+  flex-shrink: 0;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid var(--clr-border);
+  background: var(--clr-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-text-2);
+  transition: all var(--transition);
+}
+.carousel-btn:hover { border-color: var(--clr-primary); color: var(--clr-primary); }
+.carousel-btn[disabled] { opacity: .3; pointer-events: none; }
+
+/* Dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  margin-top: 1.5rem;
+}
+.carousel-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--clr-border);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+.carousel-dot.active {
+  background: var(--clr-primary);
+  transform: scale(1.25);
+}
+
+@media (max-width: 680px) {
+  .review-card { flex: 0 0 85vw; }
+  .carousel-btn { display: none; }
 }
 
 /* -- CONTACT ------------------------------------------------------------ */
@@ -772,10 +935,13 @@ ul { list-style: none; }
   color: var(--clr-white);
 }
 .footer__brand img {
-  height: 36px;
+  height: 38px;
   width: auto;
-  filter: brightness(0) invert(1);   /* render as white on dark bg */
-  opacity: .9;
+  border-radius: 6px;
+  /* show logo at natural colors in a small light pill */
+  background: rgba(255,255,255,.12);
+  padding: 4px 8px;
+  box-sizing: content-box;
 }
 .footer__brand-script {
   font-family: var(--ff-script);
@@ -784,6 +950,7 @@ ul { list-style: none; }
 }
 .footer__tagline { font-size: .9rem; }
 .footer__copy { font-size: .78rem; opacity: .45; }
+.footer__credit { font-size: .72rem; opacity: .35; letter-spacing: .04em; }
 
 /* -- BREADCRUMB --------------------------------------------------------- */
 .breadcrumb {
@@ -1119,11 +1286,4 @@ ul { list-style: none; }
 
   .pdp__cta { flex-direction: column; }
   .pdp__cta .btn { width: 100%; justify-content: center; }
-}
-.hero__brand-name {
-  visibility: hidden;
-}
-
-.parisienne-loaded .hero__brand-name {
-  visibility: visible;
 }
