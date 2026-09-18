@@ -131,7 +131,8 @@
         "bag-charm",
         "gift",
         "spiderman",
-        "marvel"
+        "marvel",
+        "handmade"
       ],
       "featured": true,
       "inStock": true,
@@ -568,6 +569,155 @@
       "featured": false,
       "inStock": true,
       "createdAt": "12/09/2026"
+    },
+    {
+      "id": "main-character-bag-001",
+      "name": "Main Character Bag",
+      "category": "accessories",
+      "price": 1499,
+      "originalPrice": 1799,
+      "badge": null,
+      "shortDescription": "A bold, chunky crochet bag made for days when your outfit deserves a little main-character energy.",
+      "description": "Meet the Main Character Bag a statement crochet shoulder bag with a chunky texture, and a playful curved silhouette. Handmade to stand out, it's the kind of bag you reach for when you want your outfit to do a little more. Pair it with your everyday fits, take it to brunch, or let it be the pop of colour in your look.",
+      "details": {
+        "Material": "Premium acrylic yarn",
+        "Height": "10-12 inches",
+        "Washable": "Hand wash lay flat to dry",
+        "Made to order": "6-7 business days",
+        "Length": "8-9 inches",
+        "Depth": "3 inches"
+      },
+      "colors": [
+        "Pink",
+        "Blue",
+        "Purple"
+      ],
+      "thumbnail": "images/thumbnails/main-character-bag-001-thumb.jpg",
+      "images": [
+        "images/products/main-character-bag-001-main.jpg",
+        "images/products/main-character-bag-001-side.jpg"
+      ],
+      "tags": [
+        "gift",
+        "shoulder-bag",
+        "handbag",
+        "handmade",
+        "accessory"
+      ],
+      "featured": false,
+      "inStock": true,
+      "createdAt": "17/09/2026"
+    },
+    {
+      "id": "love-note-shoulder-bag-001",
+      "name": "Love Note Shoulder Bag",
+      "category": "accessories",
+      "price": 1399,
+      "originalPrice": 1499,
+      "badge": "Trending",
+      "shortDescription": "A cute crochet shoulder bag with a hand-stitched heart design, made for your everyday fits and little romantic moments.",
+      "description": "The Love Note Shoulder Bag is a handmade crochet bag featuring a playful layered-heart design in pink and red. Its structured shape and comfortable shoulder strap make it an easy everyday accessory, while the bold colour combo adds a fun pop to any outfit.",
+      "details": {
+        "Material": "Premium acrylic yarn",
+        "Height": "6 inches",
+        "Washable": "Hand wash lay flat to dry",
+        "Made to order": "6-7 business days",
+        "Length": "9-10 inches",
+        "Depth": "2 inches"
+      },
+      "colors": [
+        "Pink"
+      ],
+      "thumbnail": "images/thumbnails/love-note-shoulder-bag-001-thumb.jpg",
+      "images": [
+        "images/products/love-note-shoulder-bag-001-main.jpg",
+        "images/products/love-note-shoulder-bag-001-side.jpg",
+        "images/products/love-note-shoulder-bag-001-side1.jpg"
+      ],
+      "tags": [
+        "gift",
+        "shoulder-bag",
+        "handbag",
+        "handmade",
+        "accessory"
+      ],
+      "featured": false,
+      "inStock": true,
+      "createdAt": "17/09/2026"
+    },
+    {
+      "id": "daisy-baby-bag-001",
+      "name": "Daisy Baby Bag",
+      "category": "accessories",
+      "price": 1299,
+      "originalPrice": 1499,
+      "badge": "New",
+      "shortDescription": "A dreamy shoulder bag covered in cute daisies, made for your everyday fits and flower-girl era.",
+      "description": "Hand-crocheted with three dimensional daisy flowers, this shoulder bag is the perfect mix of playful and practical. It features a comfortable crochet strap and a flap-style closure, making it easy to carry your everyday essentials while adding a fun handmade touch to your outfit.",
+      "details": {
+        "Material": "Premium acrylic yarn",
+        "Height": "6 inches",
+        "Washable": "Hand wash lay flat to dry",
+        "Made to order": "6-7 business days",
+        "Length": "9-10 inches",
+        "Depth": "3 inches"
+      },
+      "colors": [
+        "Blue-White"
+      ],
+      "thumbnail": "images/thumbnails/daisy-baby-bag-001-thumb.jpg",
+      "images": [
+        "images/products/daisy-baby-bag-001-main.jpg",
+        "images/products/daisy-baby-bag-001-side.jpg",
+        "images/products/daisy-baby-bag-001-side1.jpg"
+      ],
+      "tags": [
+        "gift",
+        "shoulder-bag",
+        "handbag",
+        "handmade",
+        "accessory"
+      ],
+      "featured": true,
+      "inStock": true,
+      "createdAt": "18/09/2026"
+    },
+    {
+      "id": "daisy-picnic-tote-001",
+      "name": "Daisy Picnic Tote",
+      "category": "accessories",
+      "price": 2199,
+      "originalPrice": 2499,
+      "badge": null,
+      "shortDescription": "A soft, vintage-inspired crochet tote covered in dreamy daisy granny squares, paired with a matching mini pouch.",
+      "description": "A dreamy crochet tote made for your everyday little adventures.This bag has a charming vintage-meets-cottagecore feel. It comes with a matching mini pouch and roomy crochet handles, making it both cute and practical for carrying your everyday essentials.",
+      "details": {
+        "Material": "Premium acrylic yarn",
+        "Height": "12 inches",
+        "Washable": "Hand wash lay flat to dry",
+        "Made to order": "6-7 business days",
+        "Length": "17-18 inches",
+        "Depth": "5 inches"
+      },
+      "colors": [
+        "Beige"
+      ],
+      "thumbnail": "images/thumbnails/daisy-picnic-tote-001-thumb.jpg",
+      "images": [
+        "images/products/daisy-picnic-tote-001-main.jpg",
+        "images/products/daisy-picnic-tote-001-side.jpg",
+        "images/products/daisy-picnic-tote-001-side1.jpg"
+      ],
+      "tags": [
+        "gift",
+        "shoulder-bag",
+        "handbag",
+        "handmade",
+        "accessory"
+      ],
+      "featured": false,
+      "inStock": true,
+      "createdAt": "18/09/2026"
     }
   ]
 }
